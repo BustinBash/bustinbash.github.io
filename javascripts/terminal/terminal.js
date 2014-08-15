@@ -9,6 +9,6 @@ Terminal.View = function(){
 }
 
 // Controller
-Terminal.Controller = function{
+Terminal.Controller = function(){
   
 }

@@ -9,6 +9,6 @@ Directory.View = function(){
 }
 
 // Controller
-Directory.Controller = function{
+Directory.Controller = function(){
   
 }

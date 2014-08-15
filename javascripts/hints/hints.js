@@ -9,6 +9,6 @@ Hints.View = function(){
 }
 
 // Controller
-Hints.Controller = function{
+Hints.Controller = function(){
   
 }

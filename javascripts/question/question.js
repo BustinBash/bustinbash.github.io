@@ -9,6 +9,6 @@ Question.View = function(){
 }
 
 // Controller
-Question.Controller = function{
+Question.Controller = function(){
   
 }

@@ -9,6 +9,6 @@ Instruction.View = function(){
 }
 
 // Controller
-Instruction.Controller = function{
+Instruction.Controller = function(){
   
 }
