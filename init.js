@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+  // Database
+  data = new Database
+  data.fetch()
+  data.store
+
   // Instruction
   var im = new Instruction.Model
   var iv = new Instruction.View
