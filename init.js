@@ -1,10 +1,13 @@
 $(document).ready(function(){
 
   // Database
-  data = new Database
-  data.fetch()
-  data.store
+  var dbc = new Database.Controller
+  var database = new Database.Model
+  database.fetch(dbc)
 
+  // Master
+  var mc = new Master.Controller
+  mc.init();
   // Instruction
   var im = new Instruction.Model
   var iv = new Instruction.View
@@ -35,5 +38,6 @@ $(document).ready(function(){
   var dv = new Directory.View
   var dc = new Directory.Controller(dv, dm)
   dc.init()
+
 
 })
