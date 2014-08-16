@@ -20,9 +20,9 @@ $(document).ready(function(){
   qc.init()
 
   // Terminal
-  var tm = new Terminal.Model
+  // var tm = new Terminal.Model
   var tv = new Terminal.View
-  var tc = new Terminal.Controller(tv, tm)
+  var tc = new Terminal.Controller(tv)
   tc.init()
 
   // Hints

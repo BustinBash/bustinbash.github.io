@@ -1,67 +1,54 @@
-var data =
-{
-  "Title": "Print Working Directory",
-  "Definition": "pwd (print working directory): This command will return the path of the directory you are currently viewing.",
-  "Challenge": "Please type 'pwd' below.",
-  "Answer": "pwd",
-  "Hint1": "You want to Print the Working Directory to continue.",
-  "Hint2": "Come on, we have it quoted just up there!",
-  "Error": "Seems like you didn't type 'pwd'.  Try again.",
-  "Success": "/usa/california/san_francisco"
-}
+Terminal.View =function(){}
 
-// Model
-Terminal.Model = function(){
-
-}
-
-// View
-Terminal.View = function(){
-  this.appendFeed = function(input){
-      if (input === data.Answer){
-        this.renderSuccess(input)
-      } else {
-        this.renderError(input)
-      }
-      this.clearText()
-    }
-
-    this.renderSuccess = function(input){
-      $('.feed').append(
-        "<p class='term-name'> BustinBash:- " + input +
-        "<p class='term-success'>" + data.Success + '</p>'
-        )
-    }
-
-    this.renderError = function(input){
-      $('.feed').append(
-        "<p class='term-name'> BustinBash:- " + input +
-        "<p class='term-error'>" + data.Error + '</p>'
-        )
-    }
-
-    this.clearText = function(){
-      $('input').val("")
-    }
+Terminal.View.prototype = {
+  input: function(){
+    return $('input').val();
+  },
+  renderSuccess: function(value, input){
+    var source   = $("#terminal-success-template").html();
+    var template = Handlebars.compile(source);
+    var context = {success: value, input: input}
+    var text    = template(context);
+    $('.feed').append(text)
+    $('input').val("");
+  },
+  renderError: function(value, input){
+    var source   = $("#terminal-error-template").html();
+    var template = Handlebars.compile(source);
+    var context = {error: value, input: input}
+    var text    = template(context);
+    $('.feed').append(text)
+    $('input').val("");
   }
 
-// Controller
-Terminal.Controller = function(view, model){
+}
+
+Terminal.Controller = function(view) {
   this.view = view;
-  this.model = model;
-  this.init = function(){
+}
+
+Terminal.Controller.prototype = {
+  init: function() {
     this.bindListeners();
-    console.log("Terminal Controller")
-  }
-  this.bindListeners = function() {
-    $('.terminal').keypress(function(e){
-      this.checkKey(e);
+  },
+  bindListeners: function(){
+    $(document).on('changeLevel', function(e, data){
+      this.data = data;
     }.bind(this));
-  }
-  this.checkKey = function(e) {
-    if (e.which == 13) {
-      var input = $('.input input').val();
-      this.view.appendFeed(input)
+    
+    $('.terminal').keypress(function(e){
+     if (e.which === 13){
+      this.checkInput(this.data)
+    }
+  }.bind(this))
+    
+  },
+  checkInput: function(data){
+    var input = this.view.input()
+    if(input == this.data.Answer){
+      this.view.renderSuccess(this.data.Success, input)
+    } else {
+      this.view.renderError(this.data.Error, input)
     }
   }
 }

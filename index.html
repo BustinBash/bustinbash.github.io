@@ -57,12 +57,15 @@
       <div class="column two-thirds" id="question_popup">
         <div class="question"></div>
       </div>
+      
       <div class="hints column third"></div>
     </div>
 
     <!-- Terminal -->
     <div class="row clearfix">
+      <div class="term-nav"></div>
       <div class="terminal">
+
         <div class='feed'>feed</div>
         <div class='input' id="terminal_popup">$ <input></div>
       </div>
@@ -82,6 +85,20 @@
     <script id="question-template" type="text/x-handlebars-template">
     <p>{{question}}</p>
     </script>
+
+    
+    <script id="question-template" type="text/x-handlebars-template">
+    <p>{{question}}</p>
+    </script>
+
+    <script id="terminal-success-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
+    <p class='term-success'>{{success}}</p>
+    </script>
+
+    <script id="terminal-error-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
+    <p class='term-error'>{{error}}</p>
+    </script>
   </div>
+
 </body>
 </html>
