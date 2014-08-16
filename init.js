@@ -8,6 +8,7 @@ $(document).ready(function(){
   // Master
   var mc = new Master.Controller
   mc.init();
+  // mc.bindEvents()
   // Instruction
   var im = new Instruction.Model
   var iv = new Instruction.View
