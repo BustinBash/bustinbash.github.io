@@ -27,6 +27,7 @@
   </div>
   <div class="instruction"></div>
   <div class="question"></div>
+  <div class="term-nav"></div>
   <div class="terminal">
     <div class='feed'></div>
     <div class='input'>$ <input></div>
@@ -36,6 +37,14 @@
   <div class="footer"></div>
   <script id="question-template" type="text/x-handlebars-template">
   <p>{{question}}</p>
+  </script>
+
+  <script id="terminal-success-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
+  <p class='term-success'>{{success}}</p>
+  </script>
+
+  <script id="terminal-error-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
+  <p class='term-error'>{{error}}</p>
   </script>
 </body>
 </html>
