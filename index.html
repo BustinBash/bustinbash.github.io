@@ -6,6 +6,7 @@
   <link rel="stylesheet" src="stylesheets/app.css" />
   <!-- Javascripts -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="javascripts/templates/handlebars.js"></script>
   <script src="https://cdn.firebase.com/v0/firebase.js"></script>
   <script type="text/javascript" src="namespace.js"></script>
   <script type="text/javascript" src="init.js"></script>
@@ -16,7 +17,6 @@
   <script type="text/javascript" src="javascripts/terminal/terminal.js"></script>
   <script type="text/javascript" src="javascripts/hints/hints.js"></script>
   <script type="text/javascript" src="javascripts/directory/directory.js"></script>
-
 </head>
 <body>
   <button id="level_one"> level one </button>
@@ -31,5 +31,8 @@
   <div class="hints"></div>
   <div class="directory"></div>
   <div class="footer"></div>
+  <script id="question-template" type="text/x-handlebars-template">
+  <p>{{question}}</p>
+  </script>
 </body>
 </html>

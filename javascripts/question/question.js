@@ -3,7 +3,11 @@ Question.View = function(){}
 
 Question.View.prototype = {
   render: function(question) {
-    //when we send to handlebars {'question': question }
+    var source   = $("#question-template").html();
+    var template = Handlebars.compile(source);
+    var context = {question: question}
+    var text    = template(context);
+    $('.question').html(text)
   }
 }
 
