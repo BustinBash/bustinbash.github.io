@@ -8,16 +8,15 @@ $(document).ready(function(){
   // Master
   var mc = new Master.Controller
   mc.init();
+  // mc.bindEvents()
   // Instruction
-  var im = new Instruction.Model
   var iv = new Instruction.View
-  var ic = new Instruction.Controller(iv, im)
+  var ic = new Instruction.Controller(iv)
   ic.init()
 
   // Question
-  var qm = new Question.Model
   var qv = new Question.View
-  var qc = new Question.Controller(qv, qm)
+  var qc = new Question.Controller(qv)
   qc.init()
 
   // Terminal

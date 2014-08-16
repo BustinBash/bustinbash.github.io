@@ -1,16 +1,31 @@
-// Model
-Question.Model = function(){
-
-}
-
 // View
-Question.View = function(){
+Question.View = function(){}
 
+Question.View.prototype = {
+  render: function(question) {
+    var source   = $("#question-template").html();
+    var template = Handlebars.compile(source);
+    var context = {question: question}
+    var text    = template(context);
+    $('.question').html(text)
+  }
 }
 
 // Controller
-Question.Controller = function(){
-  this.init = function(){
-    console.log("Question Controller")
+Question.Controller = function(view){
+  this.view = view;
+}
+Question.Controller.prototype = {
+  init: function() {
+    this.bindListeners();
+  },
+  bindListeners: function() {
+    $(document).on('changeLevel', function(event, data){
+      this.question = data.Challenge; ///reminder: change to either challenge or question.
+      this.displayQuestion(this.question);
+    }.bind(this));
+  },
+  displayQuestion: function(question){
+    this.view.render(question)
   }
 }
