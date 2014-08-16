@@ -38,6 +38,7 @@ Terminal.Controller.prototype = {
     
     $('.terminal').keypress(function(e){
      if (e.which === 13){
+      $(document).trigger('success');
       this.checkInput(this.data)
     }
   }.bind(this))
@@ -46,6 +47,7 @@ Terminal.Controller.prototype = {
   checkInput: function(data){
     var input = this.view.input()
     if(input == this.data.Answer){
+      $(document).trigger('success');
       this.view.renderSuccess(this.data.Success, input)
     } else {
       this.view.renderError(this.data.Error, input)

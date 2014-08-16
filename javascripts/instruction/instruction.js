@@ -18,11 +18,10 @@ Instruction.Controller.prototype = {
   },
   bindListeners: function() {
     $(document).on('changeLevel', function(event, data){
-      this.instructions = data.Definition // change JSON to Instruction
-      this.displayInstruction(this.instructions)
+      this.displayInstructions(data.Instructions)
     }.bind(this))
   },
-  displayInstruction: function(instructions) {
+  displayInstructions: function(instructions) {
     this.view.render(instructions)
   }
 }

@@ -12,6 +12,7 @@ Database.Model = function() {
   }
 }
 
+
 Database.Controller = function() {
   this.run = function(data) {
     $(document).trigger('getData', data)

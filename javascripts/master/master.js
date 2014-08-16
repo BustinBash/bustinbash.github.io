@@ -4,7 +4,6 @@ Master.Controller.prototype = {
   init: function(){
     $(document).on('getData', function(event, data) {
       this.db = data
-      // this.levelOneData(this.db)
     }.bind(this)
     )
     this.bindListeners()

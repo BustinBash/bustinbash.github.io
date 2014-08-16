@@ -16,8 +16,8 @@ $(document).ready(function(){
 
   // Question
   var qv = new Question.View
-  var qc = new Question.Controller(qv)
-  qc.init()
+  var qv = new Question.Controller(qv)
+  qv.init()
 
   // Terminal
   // var tm = new Terminal.Model
@@ -26,17 +26,15 @@ $(document).ready(function(){
   tc.init()
 
   // Hints
-  var hm = new Hints.Model
-  var hv = new Hints.View
-  var hc = new Hints.Controller(hv, hm)
-  hc.init()
+  // var hm = new Hints.Model
+  // var hv = new Hints.View
+  // var hc = new Hints.Controller(hv, hm)
+  // hc.init()
 
 
   // Directory
-  var dm = new Directory.Model
+  // var dm = new Directory.Model
   var dv = new Directory.View
-  var dc = new Directory.Controller(dv, dm)
+  var dc = new Directory.Controller(dv)
   dc.init()
-
-
 })
