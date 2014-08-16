@@ -21,7 +21,7 @@ Question.Controller.prototype = {
   },
   bindListeners: function() {
     $(document).on('changeLevel', function(event, data){
-      this.question = data.Challenge; ///reminder: change to either challenge or question.
+      this.question = data.Question; ///reminder: change to either challenge or question.
       this.displayQuestion(this.question);
     }.bind(this));
   },

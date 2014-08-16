@@ -2,9 +2,11 @@
 <head>
   <title>Bustin' Bash</title>
   <!-- Stylesheets -->
-  <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <link rel="stylesheet" src="stylesheets/app.css" />
+  <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/app.css" >
   <link rel="stylesheet" type="text/css" href="stylesheets/terminal.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Javascripts -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="javascripts/templates/handlebars.js"></script>
@@ -20,31 +22,61 @@
   <script type="text/javascript" src="javascripts/directory/directory.js"></script>
 </head>
 <body>
-  <div class="navbar">
-    <button id="level_one"> level one </button>
-    <button id="level_two"> level two </button>
-    <button id="level_three"> level three </button>
-  </div>
-  <div class="instruction"></div>
-  <div class="question"></div>
-  <div class="term-nav"></div>
-  <div class="terminal">
-    <div class='feed'></div>
-    <div class='input'>$ <input></div>
-  </div>
-  <div class="hints"></div>
-  <div class="directory"></div>
-  <div class="footer"></div>
-  <script id="question-template" type="text/x-handlebars-template">
-  <p>{{question}}</p>
-  </script>
+  <div class="container">
 
-  <script id="terminal-success-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
-  <p class='term-success'>{{success}}</p>
-  </script>
+    <!-- Navbar/ LOGO -->
+    <div class="row clearfix">
+      <div class="navbar column two-thirds">
+        <i class="fa fa-file-code-o fa-2x" id="level_one" ></i>
+        <i class="fa fa-file-code-o fa-2x" id="level_two" ></i>
+        <i class="fa fa-file-code-o fa-2x" id="level_three" ></i>
+      </div>
+      <div class="logo column third">LOGO</div>
+    </div>
 
-  <script id="terminal-error-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
-  <p class='term-error'>{{error}}</p>
-  </script>
+    <!-- Question/Hints -->
+    <div class="row clearfix">
+      <div class="question column two-thirds"> </div>
+      <div class="hints column third"></div>
+    </div>
+
+    <!-- Terminal -->
+    <div class="row clearfix">
+      <div class="term-nav"></div>
+      <div class="terminal">
+        <div class='feed'></div>
+        <div class='input'>$ <input></div>
+      </div>
+    </div>
+
+    <!-- Directory-->
+    <div class="row clearfix">
+      <div class="directory">directory</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="row clearfix">
+      <div class="footer">footer</div>
+    </div>
+
+    <!-- Handlebars Templates -->
+    <script id="question-template" type="text/x-handlebars-template">
+    <p>{{question}}</p>
+    </script>
+
+    
+    <script id="question-template" type="text/x-handlebars-template">
+    <p>{{question}}</p>
+    </script>
+
+    <script id="terminal-success-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
+    <p class='term-success'>{{success}}</p>
+    </script>
+
+    <script id="terminal-error-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
+    <p class='term-error'>{{error}}</p>
+    </script>
+  </div>
+
 </body>
 </html>
