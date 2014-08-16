@@ -4,6 +4,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" src="stylesheets/app.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/terminal.css">
   <!-- Javascripts -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="javascripts/templates/handlebars.js"></script>
@@ -19,15 +20,17 @@
   <script type="text/javascript" src="javascripts/directory/directory.js"></script>
 </head>
 <body>
-  <button id="level_one"> level one </button>
-  <button id="level_two"> level two </button>
-  <button id="level_three"> level three </button>
-
-
-  <div class="navbar"></div>
+  <div class="navbar">
+    <button id="level_one"> level one </button>
+    <button id="level_two"> level two </button>
+    <button id="level_three"> level three </button>
+  </div>
   <div class="instruction"></div>
   <div class="question"></div>
-  <div class="terminal"></div>
+  <div class="terminal">
+    <div class='feed'></div>
+    <div class='input'>$ <input></div>
+  </div>
   <div class="hints"></div>
   <div class="directory"></div>
   <div class="footer"></div>
