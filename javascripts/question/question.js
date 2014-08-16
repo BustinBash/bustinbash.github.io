@@ -1,21 +1,15 @@
-// Model
-Question.Model = function(){
-
-}
-
 // View
 Question.View = function(){}
 
 Question.View.prototype = {
-  apppendQuestion: function(question) {
-    $('.question').append("<p>" + question + "</p>") // add handlebars
+  render: function(question) {
+    //when we send to handlebars {'question': question }
   }
 }
 
 // Controller
-Question.Controller = function(view, model){
+Question.Controller = function(view){
   this.view = view;
-  this.model = model;
 }
 Question.Controller.prototype = {
   init: function() {
@@ -28,6 +22,6 @@ Question.Controller.prototype = {
     }.bind(this));
   },
   displayQuestion: function(question){
-    this.view.apppendQuestion(question)
+    this.view.render(question)
   }
 }
