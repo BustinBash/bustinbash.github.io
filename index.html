@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/terminal.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="stylesheets/hopscotch.css" rel="stylesheet">
   <!-- Javascripts -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="javascripts/templates/handlebars.js"></script>
@@ -20,23 +21,43 @@
   <script type="text/javascript" src="javascripts/terminal/terminal.js"></script>
   <script type="text/javascript" src="javascripts/hints/hints.js"></script>
   <script type="text/javascript" src="javascripts/directory/directory.js"></script>
+  <script type="text/javascript" src="javascripts/popup/hopscotch.min.js"></script>
+  <script type="text/javascript" src="javascripts/popup/popup.js"></script>
 </head>
 <body>
   <div class="container">
 
     <!-- Navbar/ LOGO -->
     <div class="row clearfix">
-      <div class="navbar column two-thirds">
-        <i class="fa fa-file-code-o fa-2x" id="level_one" ></i>
-        <i class="fa fa-file-code-o fa-2x" id="level_two" ></i>
-        <i class="fa fa-file-code-o fa-2x" id="level_three" ></i>
+      <div class="navbar column two-thirds" id ="navbar_popup">
+        <!-- One -->
+        <!-- <button id="level_one"> level one </button> -->
+
+        <!-- <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-check-circle fa-2x "></i></div> -->
+
+        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-file-code-o fa-2x "></i></div>
+
+        <div class="tooltip levels" id="level_two" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-file-code-o fa-2x "></i></div>
+
+        <div class="tooltip levels" id="level_three" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-file-code-o fa-2x "></i></div>
+
+        <!-- extra levels -->
+
+        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-file-code-o fa-2x "></i></div>
+
+        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-file-code-o fa-2x "></i></div>
+
+        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-file-code-o fa-2x "></i></div>
       </div>
       <div class="logo column third">LOGO</div>
     </div>
 
     <!-- Question/Hints -->
     <div class="row clearfix">
-      <div class="question column two-thirds"> </div>
+      <div class="column two-thirds" id="question_popup">
+        <div class="question"></div>
+      </div>
+      
       <div class="hints column third"></div>
     </div>
 
@@ -44,14 +65,15 @@
     <div class="row clearfix">
       <div class="term-nav"></div>
       <div class="terminal">
-        <div class='feed'></div>
-        <div class='input'>$ <input></div>
+
+        <div class='feed'>feed</div>
+        <div class='input' id="terminal_popup">$ <input></div>
       </div>
     </div>
 
     <!-- Directory-->
     <div class="row clearfix">
-      <div class="directory">directory</div>
+      <div class="directory" id="directory_popup">directory</div>
     </div>
 
     <!-- Footer -->

@@ -63,6 +63,54 @@ div.footer{
 
 }
 
+/* Tooltip */
+
+.tooltip {
+  display: inherit;
+  position: relative;
+}
+.tooltip:before, .tooltip:after {
+  display: none;
+  position: absolute;
+}
+.tooltip:hover:before, .tooltip:hover:after {
+  display: block;
+}
+.tooltip:before {
+  background: #1abc9c;
+  border-radius: 4px;
+  color: #fff;
+  content: attr(data-tooltip-content);
+  padding: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  left: 0;
+  margin-top: 6px;
+  top: 100%;
+}
+.tooltip:after {
+  border: 6px solid transparent;
+  content: '';
+  height: 0;
+  width: 0;
+  border-bottom-color: #1abc9c;
+  border-top: none;
+  left: 10px;
+  top: 103%;
+}
+
+.levels{
+  display: inline-block;
+}
+
+/* Custom Fontawesome */
+.fa-check-circle{
+  color:#16a085;
+}
+
+.fa-file-code-o{
+  color: #e74c3c;
+}
 
 /* Responsive Grid */
 
