@@ -9,22 +9,23 @@ Master.Controller.prototype = {
     )
   },
   bindListeners: function(data){
-      var self = this;
-      $('.levels').on('click', function(e){
-        var id = $(this).attr('id')
-        var createFunction = "self." + id
-        var func = eval(createFunction)
-        var level = data.Navigation[id]
-        $(document).trigger('changeLevel', level)
-      });
-      $(document).on('success', function(event, data){
-        this.switchLevel(data);
-      }.bind(this));
+    this.masterData = data
+    var self = this;
+    $('.levels').on('click', function(e){
+      var id = $(this).attr('id')
+      var level = data.Navigation[id]
+      $(document).trigger('changeLevel', level)
+    });
+    $(document).on('success', function(event, localData){
+      this.switchLevel(localData, this.masterData);
+    }.bind(this));
   },
-  switchLevel: function(data) {
-    var nextId = data().id + 1
-    var lesson = "Lesson" + nextId
-    //$(document).trigger('changeLevel', lesson)
+  switchLevel: function(localData, masterData) {
+    var self = this
+    var nextId = localData().id + 1
+    var nextLesson = "Lesson" + nextId
+    var lesson = masterData.Navigation[nextLesson]
+    $(document).trigger('changeLevel', lesson)
   }
 }
 
