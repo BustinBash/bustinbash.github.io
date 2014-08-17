@@ -35,18 +35,17 @@ Terminal.Controller.prototype = {
     $(document).on('changeLevel', function(e, data){
       this.data = data;
     }.bind(this));
-    
+
     $('.terminal').keypress(function(e){
      if (e.which === 13){
-      $(document).trigger('success');
       this.checkInput(this.data)
     }
   }.bind(this))
-    
+
   },
   checkInput: function(data){
     var input = this.view.input()
-    if(input == this.data.Answer){
+    if(input === this.data.Answer){
       $(document).trigger('success');
       this.view.renderSuccess(this.data.Success, input)
     } else {

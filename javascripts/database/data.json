@@ -1,60 +1,61 @@
 {
-  "Navigation": {
-    "Lesson1":
-      {
-        "Title": "Print Working Directory",
-        "Instructions": "pwd (print working directory): This command will return the path of the directory you are currently viewing.",
-        "Question": "Please type 'pwd' below.",
-        "Answer": "pwd",
-        "Hint1": "You want to Print the Working Directory to continue.",
-        "Hint2": "Come on, we have it quoted just up there!",
-        "Error": "Seems like you didn't type 'pwd'.  Try again.",
-        "Success": "/usa/california/san_francisco"
-      },
-    "Lesson2":
-      {
-        "Title": "Change Directory",
-        "Instructions": "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd california' will change your working directory to $/usa/california'.",
-        "Question": "Please type 'cd california' to change directories.",
-        "Answer": "cd california",
-        "Hint1": "You need to Change the Directory to 'california' continue.",
-        "Hint2": "Really, bro?  You are going to hate the later challenges.",
-        "Error": "Seems like you didn't type 'cd california'.  Try again.",
-        "Success": "/usa/california/"
-       },
-    "Lesson3":
-      {
-        "Title": "Change Directory",
-        "Instructions": "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd bob' will change your working directory to $/usa/california'.",
-        "Question": "Please type 'cd ..' to return to $/usa/",
-        "Answer": "cd ..",
-        "Hint1": "Please Change Directories to continue.",
-        "Hint2": "/facepalm",
-        "Error": "Seems like you didn't type 'cd ..'.  Try again.",
-        "Success": "/usa/"
-      },
-    "Lesson4":
-      {
-        "Title": "Change Directory",
-        "Instructions": "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd bob' will change your working directory to $/usa/california'.",
-        "Question": "Please type 'cd /california/san_francisco' below.",
-        "Answer": "cd /california/san_francisco",
-        "Hint1": "Please Change Directories to continue.",
-        "Hint2": "Sleepy....  :-o Zzzzz",
-        "Error": "Seems like you didn't type 'cd /california/san_francisco'.  Try again.",
-        "Success": "/usa/california/san_francisco"
-      },
-    "Lesson5":
-      {
-        "Title": "List Directory / Files",
-        "Instructions": "ls (list directory / files): This command will display the contents of a directory.  For example: 'ls' will display two sub folders below.",
-        "Question": "Please type 'ls' to display contents.",
-        "Answer": "ls",
-        "Hint1": "List the Directory.",
-        "Hint2": "Sleepy....  :-o Zzzzz",
-        "Error": "Seems like you didn't type 'ls'.  Try again.",
-        "Success": "List the folders and files"
-      }
+  "Navigation" : {
+    "Lesson1" : {
+      "id": 1,
+      "Answer" : "pwd",
+      "Error" : "Seems like you didn't type 'pwd'.  Try again.",
+      "Hint1" : "You want to Print the Working Directory to continue.",
+      "Hint2" : "Come on, we have it quoted just up there!",
+      "Instructions" : "pwd (print working directory): This command will return the path of the directory you are currently viewing.",
+      "Question" : "Please type 'pwd' below.",
+      "Success" : "/usa/california/san_francisco",
+      "Title" : "Print Working Directory"
+    },
+    "Lesson2" : {
+      "id": 2,
+      "master": "USA",
+      "branches": ["CA", "NY", "TX"],
+      "Answer" : "cd usa",
+      "Error" : "Seems like you didn't type 'cd california'.  Try again.",
+      "Hint1" : "You need to Change the Directory to 'california' continue.",
+      "Hint2" : "Really, bro?  You are going to hate the later Questions.",
+      "Instructions" : "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd california' will change your working directory to $/usa/california'.",
+      "Question" : "Please type 'cd USA' to change directories.",
+      "Success" : "/usa",
+      "Title" : "Change Directory"
+    },
+    "Lesson3" : {
+      "id": 3,
+      "Answer" : "cd ..",
+      "Error" : "Seems like you didn't type 'cd ..'.  Try again.",
+      "Hint1" : "Please Change Directories to continue.",
+      "Hint2" : "/facepalm",
+      "Instructions" : "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd bob' will change your working directory to $/usa/california'.",
+      "Question" : "Please type 'cd ..' to return to $/usa/",
+      "Success" : "/usa/",
+      "Title" : "Change Directory"
+    },
+    "Lesson4" : {
+      "id": 4,
+      "Answer" : "cd /california/san_francisco",
+      "Error" : "Seems like you didn't type 'cd /california/san_francisco'.  Try again.",
+      "Hint1" : "Please Change Directories to continue.",
+      "Hint2" : "Sleepy....  :-o Zzzzz",
+      "Instructions" : "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd bob' will change your working directory to $/usa/california'.",
+      "Question" : "Please type 'cd /california/san_francisco' below.",
+      "Success" : "/usa/california/san_francisco",
+      "Title" : "Change Directory"
+    },
+    "Lesson5" : {
+      "id": 5,
+      "Answer" : "ls",
+      "Error" : "Seems like you didn't type 'ls'.  Try again.",
+      "Hint1" : "List the Directory.",
+      "Hint2" : "Sleepy....  :-o Zzzzz",
+      "Instructions" : "ls (list directory / files): This command will display the contents of a directory.  For example: 'ls' will display two sub folders below.",
+      "Question" : "Please type 'ls' to display contents.",
+      "Success" : "List the folders and files",
+      "Title" : "List Directory / Files"
     }
   }
 }
