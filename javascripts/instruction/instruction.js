@@ -3,7 +3,7 @@ Instruction.View = function(){}
 
 Instruction.View.prototype = {
   render: function(instructions){
-    /// TODO: add handlebars
+    $(".question").append("<p>" + instructions + "</p>")
   }
 }
 
