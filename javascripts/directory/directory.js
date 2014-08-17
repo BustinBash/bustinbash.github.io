@@ -3,7 +3,6 @@ Directory.View = function(){}
 Directory.View.prototype = {
 	functionCollection: {
 		1: function(){
-			alert('yo waddup')
 		},
 
 		2: function(data) {
@@ -46,7 +45,7 @@ Directory.Controller.prototype = {
 
 	checkLevel: function(data) {
 		var id = data.id
-		this.view.functionCollection[id](data);		
+		this.view.functionCollection[id](data);
 	}
 
 }
