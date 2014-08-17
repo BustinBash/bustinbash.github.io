@@ -46,14 +46,7 @@ Directory.Controller.prototype = {
 
 	checkLevel: function(data) {
 		var id = data.id
-		// debugger
-		this.view.functionCollection[id](data);
-		// this.view.functionCollection[id]();
-		// var createFunction = "this.view.animate" + id
-		// var animateThis = eval(createFunction).bind(this.view);
-		// if(typeof(animateThis) === "function"){
-			// animateThis(data)
-		// }
+		this.view.functionCollection[id](data);		
 	}
 
 }
