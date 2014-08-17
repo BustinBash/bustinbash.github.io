@@ -8,7 +8,6 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/app.css" >
   <link rel="stylesheet" type="text/css" href="stylesheets/terminal.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="stylesheets/hopscotch.css" rel="stylesheet">
   <!-- Javascripts -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -37,21 +36,21 @@
 
         <!-- <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-check-circle fa-2x "></i></div> -->
 
-        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-file-code-o fa-2x "></i></div>
+        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
 
-        <div class="tooltip levels" id="level_two" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-file-code-o fa-2x "></i></div>
+        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
 
-        <div class="tooltip levels" id="level_three" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-file-code-o fa-2x "></i></div>
+        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
 
         <!-- extra levels -->
 
-        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-file-code-o fa-2x "></i></div>
+        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
 
-        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-file-code-o fa-2x "></i></div>
 
-        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-file-code-o fa-2x "></i></div>
       </div>
-      <div class="logo column third">LOGO</div>
+      <div class="logo column third">
+        <img class="logo" src="images/terminal.png">Bustin Bash
+      </div>
     </div>
 
     <!-- Question/Hints -->
@@ -59,7 +58,7 @@
       <div class="column two-thirds" id="question_popup">
         <div class="question"></div>
       </div>
-      
+
       <div class="hints column third"></div>
     </div>
 
@@ -68,36 +67,118 @@
       <div class="term-nav"></div>
       <div class="terminal">
 
-        <div class='feed'>feed</div>
+        <div class='feed'></div>
         <div class='input' id="terminal_popup">$ <input></div>
       </div>
     </div>
 
     <!-- Directory-->
     <div class="row clearfix">
-      <div class="directory" id="directory_popup">
-        Files:
-        <div id='directory-template'>
-          <span id='bustin-bash'>BustinBash</span>
-          <div><span id='usa'>USA</span>
-            <div id='ca'><span id='ca'>California</span>
-              <div id='sf'><span id='sf'> SanFrancisco</span>
-                <div id="ggpark">golden_gate_park.txt</div>
-              </div>
+      <div id='finder'>
+        <div id='toolbar'>
+          <div id='traffic-light'>
+            <div id='red'></div>
+            <div id='yellow'></div>
+            <div id='green'></div>
+          </div>
+          <div id='windowname'>
+            <i class='little'></i>
+            Bustin Bash
+          </div>
+          <div id='actions'>
+            <div id='back'></div>
+            <div id='next'></div>
+            <div id='iconV'></div>
+            <div id='list'></div>
+            <div id='grid'></div>
+            <div id='coverflow'>
+              <i class='view little'></i>
             </div>
-            <div id="ny">NewYork
-              <div id="buffalo">Buffalo
-                <div id="niagra">niagra_falls.txt</div>
-              </div>
-            </div>
-            <div id="montana">Montana
-              <div id="billings">Billings
-                <div id="clean">clean_air.txt</div>
-              </div>
+            <div id='settings'></div>
+            <div id='share'></div>
+            <input results='0' type='search'>
+          </div>
+        </div>
+        <div id='view'>
+          <div id='sidebar'>
+            <ul>
+              <li>
+                <span class='group'>
+                  Favorites
+                </span>
+                <ul>
+                  <li class='current_page'>
+                    <i class='afiles'></i>
+                    All My Files
+                  </li>
+                  <li>
+                    <i class='airdrop little'></i>
+                    AirDrop
+                  </li>
+                  <li>
+                    <i class='apps little'></i>
+                    Applications
+                  </li>
+                  <li>
+                    <i class='desk little'></i>
+                    Desktop
+                  </li>
+                  <li>
+                    <i class='docs little'></i>
+                    Documents
+                  </li>
+                  <li>
+                    <i class='downs little'></i>
+                    Downloads
+                  </li>
+                  <li>
+                    <i class='mov little'></i>
+                    Movies
+                  </li>
+                  <li>
+                    <i class='music little'></i>
+                    Music
+                  </li>
+                  <li>
+                    <i class='pic little'></i>
+                    Pictures
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span class='group'>
+                  Shared
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div id='content'>
+            <div class="directory" id="directory_popup">
+              <ul id='directory-template'>
+
+
+                <li>
+                  <img class='folder-icon' src="images/folder.png">
+                  <span class="folder-text">USA</span>
+
+                  <li>
+                    <img class='folder-icon' src="images/folder.png">
+                    <span class="folder-text">California</span>
+                  </li>
+                </li>
+
+
+              </ul>
             </div>
           </div>
         </div>
+
+        <!--Sample/ Remove this-->
+
+
       </div>
+
     </div>
 
     <!-- Footer -->
@@ -110,7 +191,7 @@
     <p>{{question}}</p>
     </script>
 
-    
+
     <script id="question-template" type="text/x-handlebars-template">
     <p>{{question}}</p>
     </script>
