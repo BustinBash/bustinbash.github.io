@@ -5,8 +5,13 @@ Hints.Model = function(){}
 Hints.View = function(){}
 
 Hints.View.prototype = {
-  render: function() {
-    console.log("hi there b")
+  render: function(hint) {
+    var source   = $("#hints-template").html();
+    var template = Handlebars.compile(source);
+    var context = {hint: hint}
+    var text    = template(context);
+    $('.hints').html(text)
+    console.log(hint)
   }
 }
 
@@ -24,7 +29,7 @@ Hints.Controller.prototype = {
     }.bind(this));
 
     $('#hint').on('click', function(){
-      this.displayHint(this.data.hint);
+      this.displayHint(this.data.Hint1);
       }.bind(this));
   },
   displayHint: function(hint){
