@@ -55,11 +55,20 @@
 
     <!-- Question/Hints -->
     <div class="row clearfix">
+
       <div class="column two-thirds" id="question_popup">
         <div class="question"></div>
       </div>
 
-      <div class="hints column third"></div>
+
+      <!-- <div class="hints column third" id="hint_popup"></div> -->
+
+      <div class="hints column third" id="hint_popup">
+        <button id="hint"> GIVE ME A HINT </button>
+        <div class="hints"></div>
+      </div>
+
+
     </div>
 
     <!-- Terminal -->
@@ -186,16 +195,20 @@
       <div class="footer">footer</div>
     </div>
 
+
+
     <!-- Handlebars Templates -->
+
+    <!-- Question -->
     <script id="question-template" type="text/x-handlebars-template">
     <p>{{question}}</p>
     </script>
 
+    <!-- <script id="question-template" type="text/x-handlebars-template">
+    // <p>{{question}}</p>
+    </script> -->
 
-    <script id="question-template" type="text/x-handlebars-template">
-    <p>{{question}}</p>
-    </script>
-
+    <!-- Terminal -->
     <script id="terminal-success-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
     <p class='term-success'>{{success}}</p>
     </script>
@@ -203,6 +216,15 @@
     <script id="terminal-error-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
     <p class='term-error'>{{error}}</p>
     </script>
+
+    <!-- Hints -->
+    <script id="hints-template" type="text/x-handlebars-template">
+    <p>{{hint}}</p>
+    </script>
+
+
+
+
   </div>
 </div>
 
