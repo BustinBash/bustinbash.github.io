@@ -27,9 +27,9 @@ $(document).ready(function(){
 
   // Hints
   // var hm = new Hints.Model
-  // var hv = new Hints.View
-  // var hc = new Hints.Controller(hv, hm)
-  // hc.init()
+  var hv = new Hints.View
+  var hc = new Hints.Controller(hv)
+  hc.init()
 
 
   // Directory
