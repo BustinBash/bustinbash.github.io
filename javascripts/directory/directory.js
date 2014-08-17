@@ -2,8 +2,6 @@ Directory.View = function(){}
 
 Directory.View.prototype = {
 	animate1: function(){
-		//this.timeMeOut()
-		//this.renderNext()
 	},
 	animate2: function(data) {
 		this.clearDom();
@@ -13,12 +11,7 @@ Directory.View.prototype = {
 			$('#directory-template').append("<li><img class='folder-icon' src='images/folder.png'><span class='folder-text'>" + folder + "</span></li>")
 		});
 	},
-	// timeMeOut: function() {
-	// 	setTimeout(this.renderNext, 5000);
-	// },
-	// renderNext: function(){
-	// 	$(document).trigger('changeLevel', )
-	// }
+
 
 	clearDom: function(){
 		$('#directory-template li').hide();

@@ -17,6 +17,14 @@ Master.Controller.prototype = {
         var level = data.Navigation[id]
         $(document).trigger('changeLevel', level)
       });
+      $(document).on('success', function(event, data){
+        this.switchLevel(data);
+      }.bind(this));
+  },
+  switchLevel: function(data) {
+    var nextId = data().id + 1
+    var lesson = "Lesson" + nextId
+    //$(document).trigger('changeLevel', lesson)
   }
 }
 
