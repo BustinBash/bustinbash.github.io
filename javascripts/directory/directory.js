@@ -1,14 +1,20 @@
-// Model
-// Directory.Model = function(){
-
-// }
-
-// View
 Directory.View = function(){}
 
 Directory.View.prototype = {
-	animate2: function() {
-		alert('hi')
+	animate2: function(data) {
+		this.clearDom();
+		var currentFolder = data.master
+		this.appendCurrentFolder(currentFolder)
+		data.branches.forEach(function(folder){
+			$('#directory-template').append("<li><img class='folder-icon' src='images/folder.png'><span class='folder-text'>" + folder + "</span></li>")
+		});
+	},
+
+	clearDom: function(){
+		$('#directory-template li').hide();
+	},
+	appendCurrentFolder: function(data){
+		$('.current-folder').text(data)
 	}
 }
 
@@ -34,12 +40,10 @@ Directory.Controller.prototype = {
 	checkLevel: function(data) {
 		var id = data.id
 		var createFunction = "this.view.animate" + id
-		var animateThis = eval(createFunction)
+		var animateThis = eval(createFunction).bind(this.view);
 		if(typeof(animateThis) === "function"){
-			animateThis()
+			animateThis(data)
 		}
 	}
 
 }
-
-// Controller
