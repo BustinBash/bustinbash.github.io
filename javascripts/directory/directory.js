@@ -7,12 +7,8 @@
 Directory.View = function(){}
 
 Directory.View.prototype = {
-	renderBeforeDirectory: function(before){
-		$("#" + before).css("background-color", "yellow");
-	},
-	renderAfterDirectory: function(before, after) {
-		$("#" + before).css("background-color", "")
-		$("#" + after).css("background-color", "yellow")
+	animate2: function() {
+		alert('hi')
 	}
 }
 
@@ -27,21 +23,23 @@ Directory.Controller.prototype = {
 	},
 	bindListeners: function() {
 		$(document).on('changeLevel', function(event, data){
-			this.after = data.After;
-			this.before = data.Before;
-			this.createBeforeDir(this.before);
+			this.data = data;
 		}.bind(this));
 
 		$(document).on('success', function(){
-			this.createAfterDir(this.before, this.after)
+			this.checkLevel(this.data)
 		}.bind(this));
 	},
-	createBeforeDir: function(before){
-		this.view.renderBeforeDirectory(before);
-	},
-	createAfterDir: function(before, after) {
-		this.view.renderAfterDirectory(before, after)
+
+	checkLevel: function(data) {
+		var id = data.id
+		var createFunction = "this.view.animate" + id
+		var animateThis = eval(createFunction)
+		if(typeof(animateThis) === "function"){
+			animateThis()
+		}
 	}
+
 }
 
 // Controller
