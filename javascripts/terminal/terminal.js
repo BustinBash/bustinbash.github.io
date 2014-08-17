@@ -11,6 +11,7 @@ Terminal.View.prototype = {
     var text    = template(context);
     $('.feed').append(text)
     $('input').val("");
+
   },
   renderError: function(value, input){
     var source   = $("#terminal-error-template").html();
@@ -35,17 +36,20 @@ Terminal.Controller.prototype = {
     $(document).on('changeLevel', function(e, data){
       this.data = data;
     }.bind(this));
-    
+
     $('.terminal').keypress(function(e){
      if (e.which === 13){
       this.checkInput(this.data)
     }
   }.bind(this))
-    
+
   },
   checkInput: function(data){
     var input = this.view.input()
-    if(input == this.data.Answer){
+    if(input === this.data.Answer){
+      $(document).trigger('success', function(){
+        return this.data;
+      }.bind(this));
       this.view.renderSuccess(this.data.Success, input)
     } else {
       this.view.renderError(this.data.Error, input)

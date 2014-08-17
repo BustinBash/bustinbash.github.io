@@ -2,9 +2,13 @@
 <head>
   <title>Bustin' Bash</title>
   <!-- Stylesheets -->
+
   <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <link rel="stylesheet" src="stylesheets/app.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/directory.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/app.css" >
   <link rel="stylesheet" type="text/css" href="stylesheets/terminal.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="stylesheets/hopscotch.css" rel="stylesheet">
   <!-- Javascripts -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="javascripts/templates/handlebars.js"></script>
@@ -18,33 +22,202 @@
   <script type="text/javascript" src="javascripts/terminal/terminal.js"></script>
   <script type="text/javascript" src="javascripts/hints/hints.js"></script>
   <script type="text/javascript" src="javascripts/directory/directory.js"></script>
+  <script type="text/javascript" src="javascripts/popup/hopscotch.min.js"></script>
+  <script type="text/javascript" src="javascripts/popup/popup.js"></script>
+  <!-- {{> script_mania }} -->
 </head>
 <body>
-  <div class="navbar">
-    <button id="level_one"> level one </button>
-    <button id="level_two"> level two </button>
-    <button id="level_three"> level three </button>
-  </div>
-  <div class="instruction"></div>
-  <div class="question"></div>
-  <div class="term-nav"></div>
-  <div class="terminal">
-    <div class='feed'></div>
-    <div class='input'>$ <input></div>
-  </div>
-  <div class="hints"></div>
-  <div class="directory"></div>
-  <div class="footer"></div>
-  <script id="question-template" type="text/x-handlebars-template">
-  <p>{{question}}</p>
-  </script>
+  <div class="container">
 
-  <script id="terminal-success-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
-  <p class='term-success'>{{success}}</p>
-  </script>
+    <!-- Navbar/ LOGO -->
+    <div class="row clearfix">
+      <div class="navbar column two-thirds" id ="navbar_popup">
+        <!-- One -->
+        <!-- <button id="level_one"> level one </button> -->
 
-  <script id="terminal-error-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
-  <p class='term-error'>{{error}}</p>
-  </script>
+        <!-- <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><i class="fa fa-check-circle fa-2x "></i></div> -->
+
+        <div class="tooltip levels" id="Lesson1" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
+
+        <div class="tooltip levels" id="Lesson2" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
+
+        <div class="tooltip levels" id="Lesson3" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
+
+        <!-- extra levels -->
+
+        <div class="tooltip levels" id="level_one" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
+
+
+      </div>
+      <div class="logo column third">
+        <img class="logo" src="images/terminal.png">Bustin Bash
+      </div>
+    </div>
+<hr>
+    <!-- Terminal/ Hints/ Questions -->
+    <div class="row clearfix">
+      <div class="column two-thirds">
+        <div class="term-nav">
+          <div id='terminal-light'>
+            <div id='red'></div>
+            <div id='yellow'></div>
+            <div id='green'></div>
+          </div>
+        </div>
+        <div class="terminal">
+
+          <div class='feed'></div>
+          <div class='input' id="terminal_popup">$ <input></div>
+        </div>
+      </div>
+
+      <div class="column third">
+        <div class="question"></div>
+        <button id="hint"> GIVE ME A HINT </button>
+        <div class="hints"></div>
+      </div>
+    </div>
+<hr>
+    <!-- Directory-->
+    <div class="row clearfix">
+      <div class="column two-thirds">
+        <div class="directory">
+          <div id='finder'>
+            <div id='toolbar'>
+              <div id='traffic-light'>
+                <div id='red'></div>
+                <div id='yellow'></div>
+                <div id='green'></div>
+              </div>
+              <div id='windowname'>
+                <i></i>
+                <span class="current-folder">Bustin' Bash</span>
+              </div>
+              <div id='actions'>
+                <div id='back'></div>
+                <div id='next'></div>
+                <div id='iconV'></div>
+                <div id='list'></div>
+                <div id='grid'></div>
+                <div id='coverflow'>
+                  <i class='view little'></i>
+                </div>
+                <div id='settings'></div>
+                <div id='share'></div>
+                <input results='0' type='search'>
+              </div>
+            </div>
+            <div id='view'>
+              <div id='sidebar'>
+                <ul>
+                  <li>
+                    <span class='group'>
+                      Favorites
+                    </span>
+                    <ul>
+                      <li class='current_page'>
+                        <i class='afiles'></i>
+                        All My Files
+                      </li>
+                      <li>
+                        <i class='airdrop little'></i>
+                        AirDrop
+                      </li>
+                      <li>
+                        <i class='apps little'></i>
+                        Applications
+                      </li>
+                      <li>
+                        <i class='desk little'></i>
+                        Desktop
+                      </li>
+                      <li>
+                        <i class='docs little'></i>
+                        Documents
+                      </li>
+                      <li>
+                        <i class='downs little'></i>
+                        Downloads
+                      </li>
+                      <li>
+                        <i class='mov little'></i>
+                        Movies
+                      </li>
+                      <li>
+                        <i class='music little'></i>
+                        Music
+                      </li>
+                      <li>
+                        <i class='pic little'></i>
+                        Pictures
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class='group'>
+                      Shared
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div id='content'>
+                <div class="directory" id="directory_popup">
+                  <ul id='directory-template'>
+
+
+                    <li>
+                      <img class='folder-icon' src="images/folder.png">
+                      <span class="folder-text">USA</span>
+                    </li>
+
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Cool Tips about bash -->
+      <div class="column third">Tips</div>
+    </div>
+<hr>
+    <!-- Footer -->
+    <div class="row clearfix">
+      <div class="footer">footer</div>
+    </div>
+
+
+
+    <!-- Handlebars Templates -->
+
+    <!-- Question -->
+    <script id="question-template" type="text/x-handlebars-template">
+    <p>{{question}}</p>
+    </script>
+
+    <!-- Terminal -->
+    <script id="terminal-success-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
+    <p class='term-success'>{{success}}</p>
+    </script>
+
+    <script id="terminal-error-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
+    <p class='term-error'>{{error}}</p>
+    </script>
+
+    <!-- Hints -->
+    <script id="hints-template" type="text/x-handlebars-template">
+    <p>{{hint}}</p>
+    </script>
+
+
+
+
+  </div>
+</div>
+
 </body>
 </html>
+

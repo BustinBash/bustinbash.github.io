@@ -1,6 +1,11 @@
+*{
+
+}
+
 body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14 px;
+    background-image: url('../images/background.png');
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,20 +32,34 @@ div{
 
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 65rem;
+  width: 90%;
+}
+
+.row {
+
+}
 div.navbar{
-
 }
+
+.logo{
+  height: 75px;
+  width: 75px;
+}
+
 div.instruction{
-
-}
-div.question{
 
 }
 div.terminal{
 
 }
+div.question{
+  /*float: right;*/
+}
 div.hints{
-
+  /*height: 15%*/
 }
 div.directory{
 
@@ -49,92 +68,125 @@ div.footer{
 
 }
 
-/* Responsive Grid */
+/* Tooltip */
 
-@media screen and (min-width: 0px) and (max-width: 959px) {
-
-    .col {
-        margin-left:2%;
-        padding:0 1.5%;
-    }
-
-    .row .col:first-child {
-        margin-left:0;
-    }
-
-
-    .grid1 {
-        width:15.0%;
-    }
-    .grid2 {
-        width:32.0%;
-    }
-    .grid3 {
-        width:49.0%;
-    }
-    .grid4 {
-        width:66.0%;
-    }
-    .grid5 {
-        width:83.0%;
-    }
-    .grid6 {
-        margin-left:0;
-        width:100%;
-    }
+.tooltip {
+  display: inherit;
+  position: relative;
+}
+.tooltip:before, .tooltip:after {
+  display: none;
+  position: absolute;
+}
+.tooltip:hover:before, .tooltip:hover:after {
+  display: block;
+}
+.tooltip:before {
+  background: #1abc9c;
+  border-radius: 4px;
+  color: #fff;
+  content: attr(data-tooltip-content);
+  padding: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  left: 0;
+  margin-top: 6px;
+  top: 100%;
+}
+.tooltip:after {
+  border: 6px solid transparent;
+  content: '';
+  height: 0;
+  width: 0;
+  border-bottom-color: #1abc9c;
+  border-top: none;
+  left: 10px;
+  top: 103%;
 }
 
-/* ----------------------------------------------------------------------- */
+.levels{
+  display: inline-block;
+}
 
-@media screen and (min-width: 960px) {
+/* Custom Fontawesome */
+.fa-check-circle{
+  color:#16a085;
+}
 
-    .col {
-        margin-left:2%;
-        padding:0 1.5%;
+.fa-file-code-o{
+  color: #e74c3c;
+}
+
+/* Responsive Grid */
+
+/* Small Screen (< 640) */
+@media (max-width: 40rem) {
+  html { font-size: 100%; }
+  .column {
+      float: left;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
-    .row .col:first-child {
-        margin-left:0;
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%;}
+    .column.half { width: 50%; }
+    .column.third { width: 33.3%; }
+    .column.fourth { width: 25%; }
+    .column.flow-opposite { float: right; }
+}
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) {
+  html { font-size: 112%; }
+  .column {
+      float: left;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.3%; }
+    .column.fourth { width: 25%; }
+    .column.flow-opposite { float: right; }
+}
 
+/* Large screens (1024px) */
+@media (min-width: 64rem) {
+  html { font-size: 120%; }
+  .column {
+      float: left;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
 
-    .grid1 {
-        width:6.5%;
-    }
-    .grid2 {
-        width:15.0%;
-    }
-    .grid3 {
-        width:23.5%;
-    }
-    .grid4 {
-        width:32.0%;
-    }
-    .grid5 {
-        width:40.5%;
-    }
-    .grid6 {
-        width:49.0%;
-    }
-    .grid7 {
-        width:57.5%;
-    }
-    .grid8 {
-        width:66.0%;
-    }
-    .grid9 {
-        width:74.5%;
-    }
-    .grid10 {
-        width:83.0%;
-    }
-    .grid11 {
-        width:91.5%;
-    }
-    .grid12 {
-        margin-left:0;
-        width:100%;
-    }
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.3%; }
+    .column.fourth { width: 25%; }
+    .column.flow-opposite { float: right; }
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
 }
 

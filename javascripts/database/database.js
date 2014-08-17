@@ -12,11 +12,11 @@ Database.Model = function() {
   }
 }
 
-Database.Controller = function() {
-  this.run = function(data) {
-    $(document).trigger('getData', data)
+  Database.Controller = function() {
+    this.run = function(data) {
+      $(document).trigger('getData', data)
+    }
   }
-}
 
 // data = new Database
 // data.fetch()
