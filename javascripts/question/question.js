@@ -1,7 +1,7 @@
 // View
-Question.View = function() {}
+BustinBash.Question.View = function() {}
 
-Question.View.prototype = {
+BustinBash.Question.View.prototype = {
   render: function(question) {
     var source   = $("#question-template").html();
     var template = Handlebars.compile(source);
@@ -12,10 +12,10 @@ Question.View.prototype = {
 }
 
 // Controller
-Question.Controller = function(view) {
+BustinBash.Question.Controller = function(view) {
   this.view = view;
 }
-Question.Controller.prototype = {
+BustinBash.Question.Controller.prototype = {
   init: function() {
     this.bindListeners();
   },

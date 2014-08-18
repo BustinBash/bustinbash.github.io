@@ -1,22 +1,21 @@
-// View
+BustinBash.Instruction.View = function() {}
 
-
-// TODO: Create a handlebars template for Instructions.
-
-Instruction.View = function() {}
-
-Instruction.View.prototype = {
+BustinBash.Instruction.View.prototype = {
   render: function(instructions){
-    $(".instructions").html("<p>" + instructions + "</p>")
+    var source   = $("#instruction-template-script").html();
+    var template = Handlebars.compile(source);
+    var context = {instruction: instructions}
+    var text    = template(context);
+    $('#instruction-template').html(text)
   }
 }
 
 // Controller
-Instruction.Controller = function(view) {
+BustinBash.Instruction.Controller = function(view) {
   this.view = view;
 }
 
-Instruction.Controller.prototype = {
+BustinBash.Instruction.Controller.prototype = {
   init: function() {
     this.bindListeners();
   },

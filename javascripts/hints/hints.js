@@ -1,25 +1,24 @@
 // Model
-Hints.Model = function() {}
+BustinBash.Hints.Model = function() {}
 
 // View
-Hints.View = function() {}
+BustinBash.Hints.View = function() {}
 
-Hints.View.prototype = {
+BustinBash.Hints.View.prototype = {
   render: function(hint) {
     var source   = $("#hints-template").html();
     var template = Handlebars.compile(source);
     var context = {hint: hint}
     var text    = template(context);
     $('.hints').html(text)
-    console.log(hint)
   }
 }
 
 // Controller
-Hints.Controller = function(view) {
+BustinBash.Hints.Controller = function(view) {
   this.view = view;
 }
-Hints.Controller.prototype = {
+BustinBash.Hints.Controller.prototype = {
   init: function() {
     this.bindListeners();
   },
@@ -29,7 +28,7 @@ Hints.Controller.prototype = {
     }.bind(this));
 
     $('#hint').on('click', function() {
-      this.displayHint(this.data.Hint1);
+      this.displayHint(this.data.Hint);
       }.bind(this));
   },
   displayHint: function(hint) {
