@@ -1,6 +1,6 @@
-Directory.View = function() {}
+BustinBash.Directory.View = function() {}
 
-Directory.View.prototype = {
+BustinBash.Directory.View.prototype = {
 	functionCollection: {
 		1: function() {
 
@@ -8,7 +8,7 @@ Directory.View.prototype = {
 
 		2: function(data){
 			this.clearDom();
-			var currentFolder = data.master
+			var currentFolder = data.Target
 			this.appendCurrentFolder(currentFolder)
 			var folders = data.Branches
 			this.render(folders)
@@ -66,11 +66,11 @@ Directory.View.prototype = {
 }
 
 
-Directory.Controller = function(view) {
+BustinBash.Directory.Controller = function(view) {
 	this.view = view;
 }
 
-Directory.Controller.prototype = {
+BustinBash.Directory.Controller.prototype = {
 	init: function() {
 		this.bindListeners();
 	},

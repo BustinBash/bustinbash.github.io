@@ -1,6 +1,6 @@
-Instruction.View = function() {}
+BustinBash.Instruction.View = function() {}
 
-Instruction.View.prototype = {
+BustinBash.Instruction.View.prototype = {
   render: function(instructions){
     var source   = $("#instruction-template-script").html();
     var template = Handlebars.compile(source);
@@ -11,11 +11,11 @@ Instruction.View.prototype = {
 }
 
 // Controller
-Instruction.Controller = function(view) {
+BustinBash.Instruction.Controller = function(view) {
   this.view = view;
 }
 
-Instruction.Controller.prototype = {
+BustinBash.Instruction.Controller.prototype = {
   init: function() {
     this.bindListeners();
   },

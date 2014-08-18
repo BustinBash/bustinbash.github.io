@@ -1,6 +1,6 @@
 // View
-Title.View = function() {}
-Title.View.prototype = {
+BustinBash.Title.View = function() {}
+BustinBash.Title.View.prototype = {
   render: function(title) {
     var source   = $('#title-template').html();
     var template = Handlebars.compile(source);
@@ -11,10 +11,10 @@ Title.View.prototype = {
 }
 
 // Controller
-Title.Controller = function(view) {
+BustinBash.Title.Controller = function(view) {
   this.view = view;
 }
-Title.Controller.prototype = {
+BustinBash.Title.Controller.prototype = {
   init: function() {
     this.bindListeners();
   },
