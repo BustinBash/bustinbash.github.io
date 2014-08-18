@@ -1,4 +1,6 @@
+*{
 
+}
 
 body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -50,11 +52,11 @@ div.navbar{
 div.instruction{
 
 }
-div.question{
-  /*height: 15%*/
-}
 div.terminal{
 
+}
+div.question{
+  /*float: right;*/
 }
 div.hints{
   /*height: 15%*/

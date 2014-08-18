@@ -24,7 +24,9 @@ i {
   background: url("http://i.imgur.com/YO1WL.png") no-repeat;
 }
 
+
 #finder {
+  float: left;
   font-family: "Lucida Grande", sans-serif;
   font-size: 12px;
   display: block;
@@ -35,8 +37,8 @@ i {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  width: 770px;
-  height: 435px;
+  height: 441px;
+  width: 800px;
   margin: 0 auto;
 }
 #finder *::before,
@@ -430,13 +432,14 @@ i {
 
 #content {
   display: block;
-  width: 637px;
   height: 380px;
+  width: 800px;
+  padding-left: 10px;
   background-color: white;
   -moz-border-radius: 0 0 6px 0;
   -webkit-border-radius: 0;
   border-radius: 0 0 6px 0;
-  float: left;
+  /*float: left;*/
 }
 
 .folder-text {
@@ -446,13 +449,14 @@ i {
 }
 /* custom starts */
 .folder-icon{
+  margin-left: 12px;
   height: 20px;
   width: 20px;
   display: inline-block;
 }
 
 .directory{
-  padding: 2%;
+  margin-left: 20px;
 }
 
 
