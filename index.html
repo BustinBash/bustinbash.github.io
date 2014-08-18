@@ -22,6 +22,7 @@
   <script type="text/javascript" src="javascripts/terminal/terminal.js"></script>
   <script type="text/javascript" src="javascripts/hints/hints.js"></script>
   <script type="text/javascript" src="javascripts/directory/directory.js"></script>
+  <script type="text/javascript" src="javascripts/title/title.js"></script>
   <script type="text/javascript" src="javascripts/popup/hopscotch.min.js"></script>
   <script type="text/javascript" src="javascripts/popup/popup.js"></script>
   <!-- {{> script_mania }} -->
@@ -62,7 +63,6 @@
         <div class="tooltip levels" id="Lesson11" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
 
         <div class="tooltip levels" id="Lesson12" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
-
         <div class="tooltip levels" id="Lesson13" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
 
         <div class="tooltip levels" id="Lesson14" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
@@ -71,14 +71,25 @@
 
 
       </div>
+
+
       <div class="logo column third">
         <img class="logo" src="images/terminal.png">Bustin Bash
       </div>
     </div>
     <hr>
+
+    <!-- title -->
+    <div class='title'>
+    </div>
+
+    <!-- instrutions -->
+
+      <div class='instructions' id="instruction-template">
+      </div>
+
+
     <!-- Terminal/ Hints/ Questions -->
-     <div class='instructions'>
-        </div>
     <div class="row clearfix">
       <div class="column two-thirds">
         <div class="term-nav">
@@ -188,7 +199,7 @@
 
               <div id='content'>
                 <div class="directory" id="directory_popup">
-                  <ul id='directory-template'>
+                  <ul id='directory-images'>
 
 
                     <li>
@@ -239,11 +250,22 @@
 
     <!-- Directory -->
 
-    <script id="directory-template-script" type="text/x-handlebars-template">
+    <script id="directory-template" type="text/x-handlebars-template">
     {{#each folderCollection}}
     <li><img class='folder-icon' src='images/folder.png'><span class='folder-text'>{{this}}</span></li>
     {{/each}}
     </script>
+
+    <!-- instruction -->
+    <script id="instruction-template-script" type="text/x-handlebars-template">
+      <p>{{instruction}}</p>
+    </script>
+
+    <!-- title -->
+    <script id="title-template" type="text/x-handlebars-template">
+      <h2>{{title}}</h2>
+    </script>
+
   </div>
 </div>
 

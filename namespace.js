@@ -5,3 +5,4 @@ Terminal    = {}
 Hints       = {}
 Database    = {}
 Master      = {}
+Title       = {}
