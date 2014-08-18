@@ -1,8 +1,12 @@
 // View
-Instruction.View = function(){}
+
+
+// TODO: Create a handlebars template for Instructions.
+
+Instruction.View = function() {}
 
 Instruction.View.prototype = {
-  render: function(instructions){
+  render: function(instructions) {
     $(".question").append("<p>" + instructions + "</p>")
   }
 }
@@ -17,9 +21,8 @@ Instruction.Controller.prototype = {
     this.bindListeners();
   },
   bindListeners: function() {
-    $(document).on('changeLevel', function(event, data){
-      // console.log(data)
-      // this.displayInstructions(data.Instructions)
+    $(document).on('changeLevel', function(event, data) {
+      this.displayInstructions(data.Instructions)
     }.bind(this))
   },
   displayInstructions: function(instructions) {

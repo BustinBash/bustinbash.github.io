@@ -1,5 +1,5 @@
 // View
-Question.View = function(){}
+Question.View = function() {}
 
 Question.View.prototype = {
   render: function(question) {
@@ -12,7 +12,7 @@ Question.View.prototype = {
 }
 
 // Controller
-Question.Controller = function(view){
+Question.Controller = function(view) {
   this.view = view;
 }
 Question.Controller.prototype = {
@@ -20,11 +20,11 @@ Question.Controller.prototype = {
     this.bindListeners();
   },
   bindListeners: function() {
-    $(document).on('changeLevel', function(event, data){
+    $(document).on('changeLevel', function(event, data) {
       this.displayQuestion(data.Question);
     }.bind(this));
   },
-  displayQuestion: function(question){
+  displayQuestion: function(question) {
     this.view.render(question)
   }
 }

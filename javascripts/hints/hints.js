@@ -1,8 +1,8 @@
 // Model
-Hints.Model = function(){}
+Hints.Model = function() {}
 
 // View
-Hints.View = function(){}
+Hints.View = function() {}
 
 Hints.View.prototype = {
   render: function(hint) {
@@ -16,23 +16,23 @@ Hints.View.prototype = {
 }
 
 // Controller
-Hints.Controller = function(view){
+Hints.Controller = function(view) {
   this.view = view;
 }
 Hints.Controller.prototype = {
-  init: function(){
+  init: function() {
     this.bindListeners();
   },
   bindListeners: function() {
-    $(document).on('changeLevel', function(event, data){
+    $(document).on('changeLevel', function(event, data) {
       this.data = data
     }.bind(this));
 
-    $('#hint').on('click', function(){
+    $('#hint').on('click', function() {
       this.displayHint(this.data.Hint1);
       }.bind(this));
   },
-  displayHint: function(hint){
+  displayHint: function(hint) {
     this.view.render(hint)
   }
 }
