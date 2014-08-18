@@ -11,7 +11,6 @@ Hints.View.prototype = {
     var context = {hint: hint}
     var text    = template(context);
     $('.hints').html(text)
-    console.log(hint)
   }
 }
 
@@ -29,7 +28,7 @@ Hints.Controller.prototype = {
     }.bind(this));
 
     $('#hint').on('click', function() {
-      this.displayHint(this.data.Hint1);
+      this.displayHint(this.data.Hint);
       }.bind(this));
   },
   displayHint: function(hint) {
