@@ -50,7 +50,7 @@ Terminal.Controller.prototype = {
       $(document).trigger('success', function() {
         return this.data;
       }.bind(this));
-      this.view.renderSuccess(this.data.Success, input)
+      this.view.renderSuccess(this.data.Success)
     } else {
       this.view.renderError(this.data.Error, input)
     }

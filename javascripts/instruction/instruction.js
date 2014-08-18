@@ -6,8 +6,8 @@
 Instruction.View = function() {}
 
 Instruction.View.prototype = {
-  render: function(instructions) {
-    $(".question").append("<p>" + instructions + "</p>")
+  render: function(instructions){
+    $(".instructions").html("<p>" + instructions + "</p>")
   }
 }
 

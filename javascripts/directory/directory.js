@@ -20,6 +20,39 @@ Directory.View.prototype = {
 			var text    = template(context);
 			$('#directory-template').html(text)
 		},
+		3: function(){
+
+		},
+		4: function(){
+			
+		},
+		5: function(){
+			
+		},
+		6: function(){
+			
+		},
+
+		7: function(){
+			
+		},
+
+		8: function(){
+			
+		},
+
+		9: function(){
+			
+		},
+
+		10: function(){
+			
+		},
+
+		11: function(){
+			
+		},
+
 
 
 		clearDom: function() {
