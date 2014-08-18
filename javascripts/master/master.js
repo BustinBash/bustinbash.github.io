@@ -5,6 +5,7 @@ Master.Controller.prototype = {
     $(document).on('getData', function(event, data) {
       this.db = data
       this.bindListeners(this.db)
+      this.autoLoadFirst(this.db)
     }.bind(this)
     )
   },
@@ -18,16 +19,22 @@ Master.Controller.prototype = {
     });
     $(document).on('success', function(event, localData) {
       this.localData = localData()
-      this.switchLevel(this.localData, this.masterData);
+      var self = this
+      setTimeout(function(){
+        self.switchLevel(self.localData, self.masterData);
+      }, 5000)
+
     }.bind(this));
   },
+
+  autoLoadFirst: function(data){
+    var firstLesson = data.Lesson1
+    $(document).trigger('changeLevel', firstLesson)
+  },
+
   switchLevel: function(localData, masterData) {
     var lesson = masterData["Lesson" + (localData.ID + 1)]
     $(document).trigger('changeLevel', lesson)
   }
+
 }
-
-
-
-
-
