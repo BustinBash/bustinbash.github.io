@@ -5,23 +5,20 @@ Directory.View.prototype = {
 		1: function() {
 
 		},
-
 		2: function(data) {
 			this.clearDom();
-			var currentFolder = data.master
-			this.appendCurrentFolder(currentFolder)
+			this.appendCurrentFolder(data.Target)
 			data.Branches.forEach(function(folder) {
 				$('#directory-template').append("<li><img class='folder-icon' src='images/folder.png'><span class='folder-text'>" + folder + "</span></li>")
 			});
 		},
-
 		clearDom: function() {
 			$('#directory-template li').hide();
 		},
 		appendCurrentFolder: function(data) {
 			$('.current-folder').text(data)
 		}
-	},
+	}
 
 }
 
@@ -35,7 +32,7 @@ Directory.Controller.prototype = {
 		this.bindListeners();
 	},
 	bindListeners: function() {
-		$(document).on('changeLevel', function(event, data){
+		$(document).on('changeLevel', function(event, data) {
 			this.data = data;
 		}.bind(this));
 
