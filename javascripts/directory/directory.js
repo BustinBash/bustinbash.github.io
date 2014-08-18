@@ -3,14 +3,14 @@ Directory.View = function(){}
 Directory.View.prototype = {
 	functionCollection: {
 		1: function(){
-			alert('yo waddup')
+			// alert('yo waddup')
 		},
 
 		2: function(data) {
 			this.clearDom();
 			var currentFolder = data.master
 			this.appendCurrentFolder(currentFolder)
-			data.branches.forEach(function(folder){
+			data.Branches.forEach(function(folder){
 				$('#directory-template').append("<li><img class='folder-icon' src='images/folder.png'><span class='folder-text'>" + folder + "</span></li>")
 			});
 		},
@@ -45,8 +45,8 @@ Directory.Controller.prototype = {
 	},
 
 	checkLevel: function(data) {
-		var id = data.id
-		this.view.functionCollection[id](data);		
+		var id = data.ID
+		this.view.functionCollection[id](data);
 	}
 
 }
