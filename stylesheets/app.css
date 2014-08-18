@@ -1,3 +1,9 @@
+#hint {
+  margin-left: 100px;
+}
+.question {
+  margin-left: 100px;
+}
 *{
 
 }
@@ -56,7 +62,7 @@ div.terminal{
 
 }
 div.question{
-  /*float: right;*/
+  float: right;
 }
 div.hints{
   /*height: 15%*/

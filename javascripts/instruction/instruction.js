@@ -1,25 +1,27 @@
-// View
-Instruction.View = function(){}
+BustinBash.Instruction.View = function() {}
 
-Instruction.View.prototype = {
+BustinBash.Instruction.View.prototype = {
   render: function(instructions){
-    $(".question").append("<p>" + instructions + "</p>")
+    var source   = $("#instruction-template-script").html();
+    var template = Handlebars.compile(source);
+    var context = {instruction: instructions}
+    var text    = template(context);
+    $('#instruction-template').html(text)
   }
 }
 
 // Controller
-Instruction.Controller = function(view) {
+BustinBash.Instruction.Controller = function(view) {
   this.view = view;
 }
 
-Instruction.Controller.prototype = {
+BustinBash.Instruction.Controller.prototype = {
   init: function() {
     this.bindListeners();
   },
   bindListeners: function() {
-    $(document).on('changeLevel', function(event, data){
-      // console.log(data)
-      // this.displayInstructions(data.Instructions)
+    $(document).on('changeLevel', function(event, data) {
+      this.displayInstructions(data.Instructions)
     }.bind(this))
   },
   displayInstructions: function(instructions) {

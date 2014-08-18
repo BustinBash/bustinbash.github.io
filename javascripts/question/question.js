@@ -1,7 +1,7 @@
 // View
-Question.View = function(){}
+BustinBash.Question.View = function() {}
 
-Question.View.prototype = {
+BustinBash.Question.View.prototype = {
   render: function(question) {
     var source   = $("#question-template").html();
     var template = Handlebars.compile(source);
@@ -12,19 +12,19 @@ Question.View.prototype = {
 }
 
 // Controller
-Question.Controller = function(view){
+BustinBash.Question.Controller = function(view) {
   this.view = view;
 }
-Question.Controller.prototype = {
+BustinBash.Question.Controller.prototype = {
   init: function() {
     this.bindListeners();
   },
   bindListeners: function() {
-    $(document).on('changeLevel', function(event, data){
+    $(document).on('changeLevel', function(event, data) {
       this.displayQuestion(data.Question);
     }.bind(this));
   },
-  displayQuestion: function(question){
+  displayQuestion: function(question) {
     this.view.render(question)
   }
 }

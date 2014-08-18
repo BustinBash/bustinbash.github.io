@@ -1,7 +1,13 @@
-Directory   = {}
-Instruction = {}
-Question    = {}
-Terminal    = {}
-Hints       = {}
-Database    = {}
-Master      = {}
+var BustinBash = {
+  Directory: {},
+  Instruction: {},
+  Question: {},
+  Terminal: {},
+  Hints: {},
+  Database: {},
+  Master: {},
+  Title: {}
+}
+
+
+

@@ -1,52 +1,91 @@
-Directory.View = function(){}
+BustinBash.Directory.View = function() {}
 
-Directory.View.prototype = {
+BustinBash.Directory.View.prototype = {
 	functionCollection: {
-		1: function(){
+		1: function() {
 
 		},
 
-		2: function(data) {
+		2: function(data){
 			this.clearDom();
-			var currentFolder = data.master
+			var currentFolder = data.Target
 			this.appendCurrentFolder(currentFolder)
-			data.Branches.forEach(function(folder){
-				$('#directory-template').append("<li><img class='folder-icon' src='images/folder.png'><span class='folder-text'>" + folder + "</span></li>")
-			});
+			var folders = data.Branches
+			this.render(folders)
+		},
+		render: function(folders){
+			var source   = $("#directory-template").html();
+			var template = Handlebars.compile(source);
+			var context = {folderCollection: folders }
+			var text    = template(context);
+			$('#directory-images').html(text)
+		},
+		3: function(){
+
+		},
+		4: function(){
+
+		},
+		5: function(){
+
+		},
+		6: function(){
+
 		},
 
-		clearDom: function(){
+		7: function(){
+
+		},
+
+		8: function(){
+
+		},
+
+		9: function(){
+
+		},
+
+		10: function(){
+
+		},
+
+		11: function(){
+
+		},
+
+
+
+		clearDom: function() {
 			$('#directory-template li').hide();
 		},
-		appendCurrentFolder: function(data){
+		appendCurrentFolder: function(data) {
 			$('.current-folder').text(data)
 		}
-	},
+	}
 
 }
 
 
-Directory.Controller = function(view){
+BustinBash.Directory.Controller = function(view) {
 	this.view = view;
 }
 
-Directory.Controller.prototype = {
+BustinBash.Directory.Controller.prototype = {
 	init: function() {
 		this.bindListeners();
 	},
 	bindListeners: function() {
-		$(document).on('changeLevel', function(event, data){
+		$(document).on('changeLevel', function(event, data) {
 			this.data = data;
 		}.bind(this));
 
-		$(document).on('success', function(){
+		$(document).on('success', function() {
 			this.checkLevel(this.data)
 		}.bind(this));
 	},
 
 	checkLevel: function(data) {
-		var id = data.ID
-		this.view.functionCollection[id](data);
+		this.view.functionCollection[data.ID](data);
 	}
 
 }

@@ -1,40 +1,46 @@
 $(document).ready(function(){
 
   // Database
-  var dbc = new Database.Controller
-  var database = new Database.Model
+  var dbc = new BustinBash.Database.Controller
+  var database = new BustinBash.Database.Model
   database.fetch(dbc)
 
   // Master
-  var mc = new Master.Controller
+  var mc = new BustinBash.Master.Controller
   mc.init();
   // mc.bindEvents()
   // Instruction
-  var iv = new Instruction.View
-  var ic = new Instruction.Controller(iv)
+  var iv = new BustinBash.Instruction.View
+  var ic = new BustinBash.Instruction.Controller(iv)
   ic.init()
 
   // Question
-  var qv = new Question.View
-  var qv = new Question.Controller(qv)
+  var qv = new BustinBash.Question.View
+  var qv = new BustinBash.Question.Controller(qv)
   qv.init()
 
   // Terminal
   // var tm = new Terminal.Model
-  var tv = new Terminal.View
-  var tc = new Terminal.Controller(tv)
+  var tv = new BustinBash.Terminal.View
+  var tc = new BustinBash.Terminal.Controller(tv)
   tc.init()
 
   // Hints
   // var hm = new Hints.Model
-  var hv = new Hints.View
-  var hc = new Hints.Controller(hv)
+  var hv = new BustinBash.Hints.View
+  var hc = new BustinBash.Hints.Controller(hv)
   hc.init()
 
 
   // Directory
   // var dm = new Directory.Model
-  var dv = new Directory.View
-  var dc = new Directory.Controller(dv)
+  var dv = new BustinBash.Directory.View
+  var dc = new BustinBash.Directory.Controller(dv)
   dc.init()
+
+
+  // Title
+  var tv = new BustinBash.Title.View
+  var tc = new BustinBash.Title.Controller(tv)
+  tc.init()
 })
