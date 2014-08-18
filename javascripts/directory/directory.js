@@ -5,13 +5,23 @@ Directory.View.prototype = {
 		1: function() {
 
 		},
-		2: function(data) {
+		
+		2: function(data){
 			this.clearDom();
-			this.appendCurrentFolder(data.Target)
-			data.Branches.forEach(function(folder) {
-				$('#directory-template').append("<li><img class='folder-icon' src='images/folder.png'><span class='folder-text'>" + folder + "</span></li>")
-			});
+			var currentFolder = data.master
+			this.appendCurrentFolder(currentFolder)
+			var folders = data.Branches
+			this.render(folders)
 		},
+		render: function(folders){
+			var source   = $("#directory-template-script").html();
+			var template = Handlebars.compile(source);
+			var context = {folderCollection: folders }
+			var text    = template(context);
+			$('#directory-template').html(text)
+		},
+
+
 		clearDom: function() {
 			$('#directory-template li').hide();
 		},
