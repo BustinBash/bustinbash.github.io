@@ -18,16 +18,16 @@ Master.Controller.prototype = {
     });
     $(document).on('success', function(event, localData) {
       this.localData = localData()
-      this.switchLevel(this.localData, this.masterData);
+      var self = this
+      setTimeout(function(){
+        self.switchLevel(self.localData, self.masterData);
+      }, 5000)
+
     }.bind(this));
   },
+
   switchLevel: function(localData, masterData) {
     var lesson = masterData["Lesson" + (localData.ID + 1)]
     $(document).trigger('changeLevel', lesson)
   }
 }
-
-
-
-
-
