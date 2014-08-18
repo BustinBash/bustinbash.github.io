@@ -18,7 +18,8 @@ Instruction.Controller.prototype = {
   },
   bindListeners: function() {
     $(document).on('changeLevel', function(event, data){
-      this.displayInstructions(data.Instructions)
+      // console.log(data)
+      // this.displayInstructions(data.Instructions)
     }.bind(this))
   },
   displayInstructions: function(instructions) {

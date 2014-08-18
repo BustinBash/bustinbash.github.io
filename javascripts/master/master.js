@@ -13,18 +13,19 @@ Master.Controller.prototype = {
     var self = this;
     $('.levels').on('click', function(e){
       var id = $(this).attr('id')
-      var level = data.Navigation[id]
+      var level = data[id]
       $(document).trigger('changeLevel', level)
     });
     $(document).on('success', function(event, localData){
-      this.switchLevel(localData, this.masterData);
+      this.localData = localData()
+      this.switchLevel(this.localData, this.masterData);
     }.bind(this));
   },
   switchLevel: function(localData, masterData) {
     var self = this
-    var nextId = localData().id + 1
+    var nextId = localData.ID + 1
     var nextLesson = "Lesson" + nextId
-    var lesson = masterData.Navigation[nextLesson]
+    var lesson = masterData[nextLesson]
     $(document).trigger('changeLevel', lesson)
   }
 }
