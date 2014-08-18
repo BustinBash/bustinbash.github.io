@@ -8,7 +8,7 @@ Directory.View.prototype = {
 
 		2: function(data){
 			this.clearDom();
-			var currentFolder = data.master
+			var currentFolder = data.Target
 			this.appendCurrentFolder(currentFolder)
 			var folders = data.Branches
 			this.render(folders)

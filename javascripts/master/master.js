@@ -22,7 +22,7 @@ Master.Controller.prototype = {
       var self = this
       setTimeout(function(){
         self.switchLevel(self.localData, self.masterData);
-      }, 5000)
+      }, 2000)
 
     }.bind(this));
   },
