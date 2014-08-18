@@ -62,7 +62,6 @@
         <div class="tooltip levels" id="Lesson11" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
 
         <div class="tooltip levels" id="Lesson12" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
-
         <div class="tooltip levels" id="Lesson13" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
 
         <div class="tooltip levels" id="Lesson14" data-tooltip-content="Awesome tooltip yo!"><img class="little" src="images/terminal.png"></div>
@@ -71,14 +70,21 @@
 
 
       </div>
+
+
       <div class="logo column third">
         <img class="logo" src="images/terminal.png">Bustin Bash
       </div>
     </div>
     <hr>
+
+    <!-- instrutions -->
+
+      <div class='instructions'>
+      </div>
+
+
     <!-- Terminal/ Hints/ Questions -->
-     <div class='instructions'>
-        </div>
     <div class="row clearfix">
       <div class="column two-thirds">
         <div class="term-nav">
@@ -244,6 +250,12 @@
     <li><img class='folder-icon' src='images/folder.png'><span class='folder-text'>{{this}}</span></li>
     {{/each}}
     </script>
+
+    <!-- instruction -->
+    <script id="instruction-template" type="text/x-handlebars-template">
+      <p>{{instruction}}</p>
+    </script>
+
   </div>
 </div>
 

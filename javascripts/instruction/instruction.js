@@ -1,13 +1,12 @@
-// View
-
-
-// TODO: Create a handlebars template for Instructions.
-
 Instruction.View = function() {}
 
 Instruction.View.prototype = {
   render: function(instructions){
-    $(".instructions").html("<p>" + instructions + "</p>")
+    var source   = $("#instruction-template").html();
+    var template = Handlebars.compile(source);
+    var context = {instruction: instructions}
+    var text    = template(context);
+    $('.instrutions').html(text)
   }
 }
 
