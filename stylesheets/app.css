@@ -56,7 +56,7 @@ div.terminal{
 
 }
 div.question{
-  /*float: right;*/
+  float: right;
 }
 div.hints{
   /*height: 15%*/

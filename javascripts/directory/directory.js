@@ -14,6 +14,39 @@ Directory.View.prototype = {
 				$('#directory-template').append("<li><img class='folder-icon' src='images/folder.png'><span class='folder-text'>" + folder + "</span></li>")
 			});
 		},
+		3: function(){
+
+		},
+		4: function(){
+			
+		},
+		5: function(){
+			
+		},
+		6: function(){
+			
+		},
+
+		7: function(){
+			
+		},
+
+		8: function(){
+			
+		},
+
+		9: function(){
+			
+		},
+
+		10: function(){
+			
+		},
+
+		11: function(){
+			
+		},
+
 
 		clearDom: function(){
 			$('#directory-template li').hide();

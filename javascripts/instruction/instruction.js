@@ -3,7 +3,7 @@ Instruction.View = function(){}
 
 Instruction.View.prototype = {
   render: function(instructions){
-    $(".question").append("<p>" + instructions + "</p>")
+    $(".instructions").html("<p>" + instructions + "</p>")
   }
 }
 
@@ -18,8 +18,8 @@ Instruction.Controller.prototype = {
   },
   bindListeners: function() {
     $(document).on('changeLevel', function(event, data){
-      // console.log(data)
-      // this.displayInstructions(data.Instructions)
+      console.log(data)
+      this.displayInstructions(data.Instructions)
     }.bind(this))
   },
   displayInstructions: function(instructions) {

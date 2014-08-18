@@ -47,10 +47,12 @@ Terminal.Controller.prototype = {
   checkInput: function(data){
     var input = this.view.input()
     if(input === this.data.Answer){
-      $(document).trigger('success', function(){
+      setTimeout(function(){}, 2000)
+        this.view.renderSuccess(this.data.Success, input)
+        $(document).trigger('success', function(){
         return this.data;
       }.bind(this));
-      this.view.renderSuccess(this.data.Success, input)
+     
     } else {
       this.view.renderError(this.data.Error, input)
     }
