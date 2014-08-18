@@ -75,7 +75,7 @@
         <img class="logo" src="images/terminal.png">Bustin Bash
       </div>
     </div>
-<hr>
+    <hr>
     <!-- Terminal/ Hints/ Questions -->
      <div class='instructions'>
         </div>
@@ -102,7 +102,7 @@
         <div class="hints"></div>
       </div>
     </div>
-<hr>
+    <hr>
     <!-- Directory-->
     <div class="row clearfix">
       <div class="column two-thirds">
@@ -208,7 +208,7 @@
       <!-- Cool Tips about bash -->
       <div class="column third">Tips</div>
     </div>
-<hr>
+    <hr>
     <!-- Footer -->
     <div class="row clearfix">
       <div class="footer">footer</div>
@@ -237,9 +237,13 @@
     <p>{{hint}}</p>
     </script>
 
+    <!-- Directory -->
 
-
-
+    <script id="directory-template-script" type="text/x-handlebars-template">
+    {{#each folderCollection}}
+    <li><img class='folder-icon' src='images/folder.png'><span class='folder-text'>{{this}}</span></li>
+    {{/each}}
+    </script>
   </div>
 </div>
 

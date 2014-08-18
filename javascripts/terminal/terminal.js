@@ -1,10 +1,10 @@
-Terminal.View =function(){}
+Terminal.View =function() {}
 
 Terminal.View.prototype = {
-  input: function(){
+  input: function() {
     return $('input').val();
   },
-  renderSuccess: function(value, input){
+  renderSuccess: function(value, input) {
     var source   = $("#terminal-success-template").html();
     var template = Handlebars.compile(source);
     var context = {success: value, input: input}
@@ -13,7 +13,7 @@ Terminal.View.prototype = {
     $('input').val("");
 
   },
-  renderError: function(value, input){
+  renderError: function(value, input) {
     var source   = $("#terminal-error-template").html();
     var template = Handlebars.compile(source);
     var context = {error: value, input: input}
@@ -32,27 +32,25 @@ Terminal.Controller.prototype = {
   init: function() {
     this.bindListeners();
   },
-  bindListeners: function(){
-    $(document).on('changeLevel', function(e, data){
+  bindListeners: function() {
+    $(document).on('changeLevel', function(e, data) {
       this.data = data;
     }.bind(this));
 
-    $('.terminal').keypress(function(e){
-     if (e.which === 13){
+    $('.terminal').keypress(function(e) {
+     if (e.which === 13) {
       this.checkInput(this.data)
     }
   }.bind(this))
 
   },
-  checkInput: function(data){
+  checkInput: function(data) {
     var input = this.view.input()
-    if(input === this.data.Answer){
-      setTimeout(function(){}, 2000)
-        this.view.renderSuccess(this.data.Success, input)
-        $(document).trigger('success', function(){
+    if(input === this.data.Answer) {
+      $(document).trigger('success', function() {
         return this.data;
       }.bind(this));
-     
+      this.view.renderSuccess(this.data.Success)
     } else {
       this.view.renderError(this.data.Error, input)
     }

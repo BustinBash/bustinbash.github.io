@@ -5,7 +5,7 @@
     "Error": "Seems like you didn't type 'pwd'.  Try again.",
     "Title": "Print Working Directory",
     "Answer": "pwd",
-    "Success": "/usa/california/san_francisco",
+    "Success": "/BustinBash",
     "Branches": "",
     "Question": "Print out the current working directory.",
     "Instructions": "pwd (print working directory): This command will return the path of the directory you are currently in.",
@@ -19,13 +19,13 @@
     "Answer": "cd usa",
     "Success": "/usa",
     "Branches": [
-      "CA",
-      "NY",
-      "TX"
+      "ca",
+      "ny",
+      "tx"
     ],
-    "Question": "Please type 'cd USA' to change directories.",
-    "Instructions": "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd california' will change your working directory to $/usa/california'.",
-    "Target": "USA"
+    "Question": "Please type 'cd usa' to change directories.",
+    "Instructions": "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd usa' will change your working directory to $/BustinBash/usa'.",
+    "Target": "usa"
   },
   "Lesson3": {
     "ID": 3,
@@ -37,8 +37,8 @@
     "Branches": [
       "USA"
     ],
-    "Question": "Please type 'cd ..' to return to $/usa/",
-    "Instructions": "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd bob' will change your working directory to $/usa/california'.",
+    "Question": "Change directory to /BustinBash",
+    "Instructions": "You can change up directories by using the '../' syntax. This moves your current directory ",
     "Target": "Bustin' Bash"
   },
   "Lesson4": {
@@ -93,25 +93,24 @@
   },
   "Lesson8": {
     "id": 8,
-    "Answer": "echo I love bash",
+    "Answer": "echo Bustin Bash",
     "Error": "Seems like you didn't type the command correctly.  Try again.",
-    "Hint1": "try typing something like 'echo your sentence here.'",
-    "Hint2": "Sleepy....  :-o Zzzzz",
-    "Instructions": "the command 'echo' is used display bash's stdoutput to the console. for example, 'bash-3.2$ echo hello out there' \n 'bash-3.2$ hello out there'",
-    "Question": "please use echo to print 'I love bash' to the console",
-    "Success": "I love bash",
-    "Title": "bash has an echo"
+    "Hint": "try typing something like 'echo your sentence here.'",
+    "Instructions": "The command 'echo' is used display text to the console. For example, '$echo Hey Universe' prints 'Hey Universe' to the screen. This is an example of Bash's STDOUT, or Standard Output, which is the output of a command. ",
+    "Question": "Print 'Bustin Bash out to the console.'",
+    "Success": "Bustin Bash",
+    "Title": "echo/STDOUT"
   },
   "Lesson9": {
     "id": 9,
-    "Answer": "$",
+    "Answer": "read user",
     "Error": "Seems like your answer is a little off. Try again.",
     "Hint1": "remember the path you $1 and $0 is the path origin.",
     "Hint2": "Sleepy....  :-o Zzzzz",
-    "Instructions": "the $ is a container for the users path output. for example if we type 'cd /USA/' bash stores the arguments that were passed and logs them to '$1'. '$0' on the other hand remains unchanged since it holds the first commmand(the shell itself). the '$' is usually referred to as a path or environment variable.",
-    "Question": "Use cd to navigate to '/USA/california/san_francisco' and then use echo to print your current directory",
-    "Success": "/USA/california/san_francisco",
-    "Title": "need more $"
+    "Instructions": "You can utilize Bash's ability to take in input, STDIN, by using the 'read' command. 'read' takes in an argument of the name of a variable which can be used later",
+    "Question": "Write a command to take in a users input and set it to the variable 'user'",
+    "Success": "",
+    "Title": "read and STDIN"
   },
   "Lesson10": {
     "id": 10,
