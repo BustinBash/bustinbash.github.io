@@ -5,7 +5,7 @@ Directory.View.prototype = {
 		1: function() {
 
 		},
-		
+
 		2: function(data){
 			this.clearDom();
 			var currentFolder = data.master
@@ -14,43 +14,43 @@ Directory.View.prototype = {
 			this.render(folders)
 		},
 		render: function(folders){
-			var source   = $("#directory-template-script").html();
+			var source   = $("#directory-template").html();
 			var template = Handlebars.compile(source);
 			var context = {folderCollection: folders }
 			var text    = template(context);
-			$('#directory-template').html(text)
+			$('#directory-images').html(text)
 		},
 		3: function(){
 
 		},
 		4: function(){
-			
+
 		},
 		5: function(){
-			
+
 		},
 		6: function(){
-			
+
 		},
 
 		7: function(){
-			
+
 		},
 
 		8: function(){
-			
+
 		},
 
 		9: function(){
-			
+
 		},
 
 		10: function(){
-			
+
 		},
 
 		11: function(){
-			
+
 		},
 
 
