@@ -1,6 +1,6 @@
-Directory.View = function() {}
+BustinBash.Directory.View = function() {}
 
-Directory.View.prototype = {
+BustinBash.Directory.View.prototype = {
 	functionCollection: {
 		1: function() {
 
@@ -66,11 +66,11 @@ Directory.View.prototype = {
 }
 
 
-Directory.Controller = function(view) {
+BustinBash.Directory.Controller = function(view) {
 	this.view = view;
 }
 
-Directory.Controller.prototype = {
+BustinBash.Directory.Controller.prototype = {
 	init: function() {
 		this.bindListeners();
 	},

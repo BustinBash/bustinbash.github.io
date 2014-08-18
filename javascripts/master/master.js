@@ -1,6 +1,6 @@
-Master.Controller = function() {}
+BustinBash.Master.Controller = function() {}
 
-Master.Controller.prototype = {
+BustinBash.Master.Controller.prototype = {
   init: function(){
     $(document).on('getData', function(event, data) {
       this.db = data

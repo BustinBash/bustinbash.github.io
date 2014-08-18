@@ -1,6 +1,6 @@
-Terminal.View =function() {}
+BustinBash.Terminal.View =function() {}
 
-Terminal.View.prototype = {
+BustinBash.Terminal.View.prototype = {
   input: function() {
     return $('input').val();
   },
@@ -24,11 +24,11 @@ Terminal.View.prototype = {
 
 }
 
-Terminal.Controller = function(view) {
+BustinBash.Terminal.Controller = function(view) {
   this.view = view;
 }
 
-Terminal.Controller.prototype = {
+BustinBash.Terminal.Controller.prototype = {
   init: function() {
     this.bindListeners();
   },
