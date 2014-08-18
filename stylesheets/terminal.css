@@ -9,7 +9,10 @@
 }
 
 .terminal {
-  position: relative;
+
+  border-collapse:collapse;
+  display : table;
+
   margin: 20px;
   width: 800px;
   border-radius: 0 0px 5px 5px;
@@ -21,23 +24,27 @@
   font-family: Monaco, Consolas, "Lucida Console", monospace;
 }
 
-.input{
-  position: absolute;
-  bottom: 0px;
-  min-width: 95%;
+.input {
+
+  display : table-row;
+  vertical-align : bottom;
+
+  height : 1px;
   color: white;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 #terminal-input {
-  min-width: 90%;
+
+  width: 90%;
+
   background: #2c3e50;
   color: white;
   border: none;
   font-size: 15px;
   font-family: Monaco, Consolas, "Lucida Console", monospace;
 }
-#terminal-input:focus {
+#terminal-input:focus{
   outline: 0;
 }
 
