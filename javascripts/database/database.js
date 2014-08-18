@@ -1,6 +1,6 @@
-Database.Model = function() {
+BustinBash.Database.Model = function() {
   var self = this
-  controller = new Database.Controller
+  controller = new BustinBash.Database.Controller
   this.fetch = function(controller) {
     var url = "https://radiant-fire-9915.firebaseio.com/";
     var firebaseRef = new Firebase(url);
@@ -12,7 +12,7 @@ Database.Model = function() {
   }
 }
 
-  Database.Controller = function() {
+BustinBash.Database.Controller = function() {
     this.run = function(data) {
       $(document).trigger('getData', data)
     }

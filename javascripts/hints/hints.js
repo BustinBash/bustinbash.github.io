@@ -1,10 +1,10 @@
 // Model
-Hints.Model = function() {}
+BustinBash.Hints.Model = function() {}
 
 // View
-Hints.View = function() {}
+BustinBash.Hints.View = function() {}
 
-Hints.View.prototype = {
+BustinBash.Hints.View.prototype = {
   render: function(hint) {
     var source   = $("#hints-template").html();
     var template = Handlebars.compile(source);
@@ -15,10 +15,10 @@ Hints.View.prototype = {
 }
 
 // Controller
-Hints.Controller = function(view) {
+BustinBash.Hints.Controller = function(view) {
   this.view = view;
 }
-Hints.Controller.prototype = {
+BustinBash.Hints.Controller.prototype = {
   init: function() {
     this.bindListeners();
   },
