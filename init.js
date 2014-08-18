@@ -37,4 +37,10 @@ $(document).ready(function(){
   var dv = new Directory.View
   var dc = new Directory.Controller(dv)
   dc.init()
+
+
+  // Title
+  var tv = new Title.View
+  var tc = new Title.Controller(tv)
+  tc.init()
 })

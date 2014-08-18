@@ -22,6 +22,7 @@
   <script type="text/javascript" src="javascripts/terminal/terminal.js"></script>
   <script type="text/javascript" src="javascripts/hints/hints.js"></script>
   <script type="text/javascript" src="javascripts/directory/directory.js"></script>
+  <script type="text/javascript" src="javascripts/title/title.js"></script>
   <script type="text/javascript" src="javascripts/popup/hopscotch.min.js"></script>
   <script type="text/javascript" src="javascripts/popup/popup.js"></script>
   <!-- {{> script_mania }} -->
@@ -77,6 +78,10 @@
       </div>
     </div>
     <hr>
+
+    <!-- title -->
+    <div class='title'>
+    </div>
 
     <!-- instrutions -->
 
@@ -254,6 +259,11 @@
     <!-- instruction -->
     <script id="instruction-template-script" type="text/x-handlebars-template">
       <p>{{instruction}}</p>
+    </script>
+
+    <!-- title -->
+    <script id="title-template" type="text/x-handlebars-template">
+      <h2>{{title}}</h2>
     </script>
 
   </div>
