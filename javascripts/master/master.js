@@ -13,9 +13,10 @@ Master.Controller.prototype = {
     this.masterData = data
     var self = this;
     $('.levels').on('click', function(e) {
+      self.deleteHint()
       var id = $(this).attr('id')
       var level = data[id]
-      $(document).trigger('changeLevel', level)
+    $(document).trigger('changeLevel', level)
     });
     $(document).on('success', function(event, localData) {
       this.localData = localData()
@@ -25,6 +26,9 @@ Master.Controller.prototype = {
       }, 2000)
 
     }.bind(this));
+  },
+  deleteHint: function(){
+    $('.hints').children().first().html("")
   },
 
   autoLoadFirst: function(data){
