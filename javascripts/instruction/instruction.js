@@ -2,11 +2,11 @@ Instruction.View = function() {}
 
 Instruction.View.prototype = {
   render: function(instructions){
-    var source   = $("#instruction-template").html();
+    var source   = $("#instruction-template-script").html();
     var template = Handlebars.compile(source);
     var context = {instruction: instructions}
     var text    = template(context);
-    $('.instrutions').html(text)
+    $('#instruction-template').html(text)
   }
 }
 
