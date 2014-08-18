@@ -1,61 +1,86 @@
 {
-  "Navigation" : {
     "Lesson1" : {
-      "id": 1,
-      "Answer" : "pwd",
+      "ID" : 1,
+      "Hint" : "You want to Print the Working Directory to continue.",
       "Error" : "Seems like you didn't type 'pwd'.  Try again.",
-      "Hint1" : "You want to Print the Working Directory to continue.",
-      "Hint2" : "Come on, we have it quoted just up there!",
-      "Instructions" : "pwd (print working directory): This command will return the path of the directory you are currently viewing.",
-      "Question" : "Please type 'pwd' below.",
+      "Title" : "Print Working Directory",
+      "Answer" : "pwd",
       "Success" : "/usa/california/san_francisco",
-      "Title" : "Print Working Directory"
+      "Branches" : "",
+      "Question" : "Print out the current working directory.",
+      "Instructions" : "pwd (print working directory): This command will return the path of the directory you are currently in.",
+      "Target": ""
     },
     "Lesson2" : {
-      "id": 2,
-      "master": "USA",
-      "branches": ["CA", "NY", "TX"],
-      "Answer" : "cd usa",
+      "ID" : 2,
+      "Hint" : "You need to Change the Directory to 'california' continue.",
       "Error" : "Seems like you didn't type 'cd california'.  Try again.",
-      "Hint1" : "You need to Change the Directory to 'california' continue.",
-      "Hint2" : "Really, bro?  You are going to hate the later Questions.",
-      "Instructions" : "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd california' will change your working directory to $/usa/california'.",
-      "Question" : "Please type 'cd USA' to change directories.",
+      "Title" : "Change Directory",
+      "Answer" : "cd usa",
       "Success" : "/usa",
-      "Title" : "Change Directory"
+      "Branches" : [ "CA", "NY", "TX" ],
+      "Question" : "Please type 'cd USA' to change directories.",
+      "Instructions" : "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd california' will change your working directory to $/usa/california'.",
+      "Target" : "USA"
     },
     "Lesson3" : {
-      "id": 3,
-      "Answer" : "cd ..",
+      "ID" : 3,
+      "Hint" : "Please Change Directories to continue.",
       "Error" : "Seems like you didn't type 'cd ..'.  Try again.",
-      "Hint1" : "Please Change Directories to continue.",
-      "Hint2" : "/facepalm",
-      "Instructions" : "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd bob' will change your working directory to $/usa/california'.",
-      "Question" : "Please type 'cd ..' to return to $/usa/",
+      "Title" : "Change Directory",
+      "Answer" : "cd ..",
       "Success" : "/usa/",
-      "Title" : "Change Directory"
+      "Branches" : ["USA"],
+      "Question" : "Please type 'cd ..' to return to $/usa/",
+      "Instructions" : "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd bob' will change your working directory to $/usa/california'.",
+      "Target" : "Bustin' Bash"
     },
     "Lesson4" : {
-      "id": 4,
-      "Answer" : "cd /california/san_francisco",
+      "ID" : 4,
+      "Hint" : "Please Change Directories to continue.",
       "Error" : "Seems like you didn't type 'cd /california/san_francisco'.  Try again.",
-      "Hint1" : "Please Change Directories to continue.",
-      "Hint2" : "Sleepy....  :-o Zzzzz",
-      "Instructions" : "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd bob' will change your working directory to $/usa/california'.",
-      "Question" : "Please type 'cd /california/san_francisco' below.",
+      "Title" : "Change Directory",
+      "Answer" : "cd /california/san_francisco",
       "Success" : "/usa/california/san_francisco",
-      "Title" : "Change Directory"
+      "Branches" : ["ggpark.txt, crissyfield.txt"],
+      "Question" : "Change directories to /california/san_francisco'.",
+      "Instructions" : "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd bob' will change your working directory to $/usa/california'.",
+      "Target" : "san_francisco"
     },
     "Lesson5" : {
-      "id": 5,
-      "Answer" : "ls",
+      "ID" : 5,
+      "Hint" : "List the Directory.",
       "Error" : "Seems like you didn't type 'ls'.  Try again.",
-      "Hint1" : "List the Directory.",
-      "Hint2" : "Sleepy....  :-o Zzzzz",
-      "Instructions" : "ls (list directory / files): This command will display the contents of a directory.  For example: 'ls' will display two sub folders below.",
+      "Title" : "List Directory / Files",
+      "Answer" : "ls",
+      "Success" : "ggpark.txt crissyfield.txt",
+      "Branches" : "",
       "Question" : "Please type 'ls' to display contents.",
-      "Success" : "List the folders and files",
-      "Title" : "List Directory / Files"
+      "Instructions" : "ls (list directory / files): This command will display the contents of a directory.  For example: 'ls' will display two sub folders below.",
+      "Target" : ""
+    },
+    "Lesson6" : {
+      "ID" : 6,
+      "Hint" : "Please make a directory Ohio to continue.",
+      "Error" : "Seems like you didn't create a directory  called Ohio!",
+      "Title" : "Make Directory",
+      "Answer" : "mkdir Ohio",
+      "Success" : "mkdir Ohio",
+      "Branches" : "",
+      "Question" : "Make a new directory called Ohio",
+      "Instructions" : "Creating directories is an integral part of using Bash. A directory is a folder on your computer that contains other folders and files. To create a new directory we use the 'mkdir' command followed by the directory name",
+      "Target" : ""
+    },
+   "Lesson7" : {
+      "ID" : 7,
+      "Hint" : "Please delete the directory BustinBash to continue.",
+      "Error" : "Seems like you didn't delete the directory correctly.  Try again.",
+      "Title" : "Remove Directory",
+      "Answer" : "rmdir BustinBash",
+      "Success" : "Maybe, put a message here",
+      "Branches" : "",
+      "Question" : "Make delete the directory called BustinBash",
+      "Instructions" : "Next we will learn how to delete a directory using the command line. Just type mkdir BustinBash to create your directory.",
+      "Target" : ""
+      }
     }
-  }
-}
