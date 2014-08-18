@@ -3,7 +3,7 @@ Directory.View = function(){}
 Directory.View.prototype = {
 	functionCollection: {
 		1: function(){
-			// alert('yo waddup')
+
 		},
 
 		2: function(data) {
