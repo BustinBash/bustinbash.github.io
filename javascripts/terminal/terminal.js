@@ -21,6 +21,13 @@ BustinBash.Terminal.View.prototype = {
     this.updateDOM(text);
   },
 
+  renderLS: function(branches){
+    branches.forEach(function(branch){
+      $('.feed').append("<div>" + branch + "</div>")
+    });
+    $('input').val("");
+    $('.feed').scrollTop($('.feed')[0].scrollHeight);
+  },
   updateDOM: function(text) {
     $('.feed').append(text)
     $('input').val("");
@@ -55,7 +62,10 @@ BustinBash.Terminal.Controller.prototype = {
         return this.data;
       }.bind(this));
       this.view.renderSuccess(this.data.Success)
-    } else {
+    } else if(input === 'ls') {
+      this.view.renderLS(this.data.Branches)
+    } 
+    else {
       this.view.renderError(this.data.Error, input)
     }
   }

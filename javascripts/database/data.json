@@ -1,181 +1,125 @@
 {
-  "Lesson1": {
-    "ID": 1,
-    "Hint": "You want to Print the Working Directory to continue.",
-    "Error": "Seems like you didn't type 'pwd'.  Try again.",
-    "Title": "Print Working Directory",
-    "Answer": "pwd",
-    "Success": "/BustinBash",
-    "Branches": "",
-    "Question": "Print out the current working directory.",
-    "Instructions": "pwd (print working directory): This command will return the path of the directory you are currently in.",
-    "Target": ""
-  },
-  "Lesson2": {
-    "ID": 2,
-    "Hint": "You need to Change the Directory to 'california' continue.",
-    "Error": "Seems like you didn't type 'cd california'.  Try again.",
-    "Title": "Change Directory",
-    "Answer": "cd usa",
-    "Success": "/usa",
-    "Branches": [
-      "ca",
-      "ny",
-      "tx"
+  "Lesson1" : {
+    "Answer" : "pwd",
+    "Branches" : [
+        "usa",
+        "mexico",
+        "canada"
     ],
-    "Question": "Please type 'cd usa' to change directories.",
-    "Instructions": "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd usa' will change your working directory to $/BustinBash/usa'.",
-    "Target": "usa"
-  },
-  "Lesson3": {
-    "ID": 3,
-    "Hint": "Please Change Directories to continue.",
-    "Error": "Seems like you didn't type 'cd ..'.  Try again.",
-    "Title": "Change Directory",
-    "Answer": "cd ..",
-    "Success": "/usa/",
-    "Branches": [
-      "USA"
+    "Error" : "Seems like you didn't print the working directory.  Try again.",
+    "Hint" : "You want to Print the Working Directory to continue.",
+    "ID" : 1,
+    "Instructions" : "pwd (print working directory): This command will return the path of the directory you are currently in.",
+    "Question" : "Print out the current working directory.",
+    "Success" : "/BustinBash",
+    "Target" : "",
+    "Title" : "Print Working Directory"
+    },
+
+    "Lesson2" : {
+    "Answer" : "ls",
+    "Branches" : [
+        "usa",
+        "mexico",
+        "canada"
     ],
-    "Question": "Change directory to /BustinBash",
-    "Instructions": "You can change up directories by using the '../' syntax. This moves your current directory ",
-    "Target": "Bustin' Bash"
-  },
-  "Lesson4": {
-    "ID": 4,
-    "Hint": "Please Change Directories to continue.",
-    "Error": "Seems like you didn't type 'cd /california/san_francisco'.  Try again.",
-    "Title": "Change Directory",
-    "Answer": "cd /california/san_francisco",
-    "Success": "/usa/california/san_francisco",
-    "Branches": [
-      "ggpark.txt, crissyfield.txt"
+    "Error" : "Seems like you didn't type 'ls'.  Try again.",
+    "Hint" : "List the Directory.",
+    "ID" : 2,
+    "Instructions" : "ls is used to display the contents of a directory. It is an extremely useful command that you'll use all the time, so get use to it! ",
+    "Question" : "Display the contents of the current directory..",
+    "Success" : "ca ny tx",
+    "Target" : "",
+    "Title" : "List Directory / Files"
+    },
+
+    "Lesson3" : {
+    "Answer" : "cd usa",
+    "Branches" : [ 
+        "ca",
+        "ny", 
+        "tx" 
     ],
-    "Question": "Change directories to /california/san_francisco'.",
-    "Instructions": "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: '$cd bob' will change your working directory to $/usa/california'.",
-    "Target": "san_francisco"
-  },
-  "Lesson5": {
-    "ID": 5,
-    "Hint": "List the Directory.",
-    "Error": "Seems like you didn't type 'ls'.  Try again.",
-    "Title": "List Directory / Files",
-    "Answer": "ls",
-    "Success": "ggpark.txt crissyfield.txt",
-    "Branches": "",
-    "Question": "Please type 'ls' to display contents.",
-    "Instructions": "ls (list directory / files): This command will display the contents of a directory.  For example: 'ls' will display two sub folders below.",
-    "Target": ""
-  },
-  "Lesson6": {
-    "ID": 6,
-    "Hint": "Please make a directory Ohio to continue.",
-    "Error": "Seems like you didn't create a directory  called Ohio!",
-    "Title": "Make Directory",
-    "Answer": "mkdir Ohio",
-    "Success": "mkdir Ohio",
-    "Branches": "",
-    "Question": "Make a new directory called Ohio",
-    "Instructions": "Creating directories is an integral part of using Bash. A directory is a folder on your computer that contains other folders and files. To create a new directory we use the 'mkdir' command followed by the directory name",
-    "Target": ""
-  },
-  "Lesson7": {
-    "ID": 7,
-    "Hint": "Please delete the directory BustinBash to continue.",
-    "Error": "Seems like you didn't delete the directory correctly.  Try again.",
-    "Title": "Remove Directory",
-    "Answer": "rmdir BustinBash",
-    "Success": "Maybe, put a message here",
-    "Branches": "",
-    "Question": "Make delete the directory called BustinBash",
-    "Instructions": "Next we will learn how to delete a directory using the command line. Just type mkdir BustinBash to create your directory.",
-    "Target": ""
-  },
-  "Lesson8": {
-    "id": 8,
-    "Answer": "echo Bustin Bash",
-    "Error": "Seems like you didn't type the command correctly.  Try again.",
-    "Hint": "try typing something like 'echo your sentence here.'",
-    "Instructions": "The command 'echo' is used display text to the console. For example, '$echo Hey Universe' prints 'Hey Universe' to the screen. This is an example of Bash's STDOUT, or Standard Output, which is the output of a command. ",
-    "Question": "Print 'Bustin Bash out to the console.'",
-    "Success": "Bustin Bash",
-    "Title": "echo/STDOUT"
-  },
-  "Lesson9": {
-    "id": 9,
-    "Answer": "read user",
-    "Error": "Seems like your answer is a little off. Try again.",
-    "Hint1": "remember the path you $1 and $0 is the path origin.",
-    "Hint2": "Sleepy....  :-o Zzzzz",
-    "Instructions": "You can utilize Bash's ability to take in input, STDIN, by using the 'read' command. 'read' takes in an argument of the name of a variable which can be used later",
-    "Question": "Write a command to take in a users input and set it to the variable 'user'",
-    "Success": "",
-    "Title": "read and STDIN"
-  },
-  "Lesson10": {
-    "id": 10,
-    "Answer": "echo $?",
-    "Error": "Seems like your answer is a little off. Try again.",
-    "Hint1": "'ls' plus 'echo' equals profit'$?'",
-    "Hint2": "Sleepy....  :-o Zzzzz",
-    "Instructions": "you've learned that ls can be used to display directories. but what happens if you try to display a directory that doesnt exist? it turns out, you can evaluate whether a path exists or not just by adding a '?' to the end of your '$' interpreting the path as either 0 meaning it exists, or not 0.",
-    "Question": "first 'ls /USA/arnold_scwarzenneger'. then call 'echo' on '$?'.",
-    "Success": "1",
-    "Title": "'ls' plus 'echo' equals profit'$?'"
-  },
-  "Lesson11": {
-    "id": 11,
-    "Answer": "pushd $timesquare /USA/newyork/timesquare ",
-    "Error": "Seems like your answer is a little off. Try again.",
-    "Hint1": "you must either cd to the directory and pushd or specify pushd $path '/pathyouwant/'",
-    "Hint2": "Sleepy....  :-o Zzzzz",
-    "Instructions": "pushd is a command used to save the current working directory so that it can be recalled at a later time.",
-    "Question": "Please save the path '/USA/newyork/timesquare' to timesquare using pushd'",
-    "Success": "/USA/newyork/timesquare",
-    "Title": "pushd"
-  },
-  "Lesson12": {
-    "id": 12,
-    "Answer": "popd",
-    "Error": "Seems like your answer is a little off. Try again.",
-    "Hint1": "I think you can pop this one out pretty easily.",
-    "Hint2": "Sleepy....  :-o Zzzzz",
-    "Instructions": "oops, we used pushd too on the same environment path too many times! now our $path is '/USA/CA/ /USA/CA/ /USA/NY/ '. to pop them out. We can use popd similarly.",
-    "Question": "Please type 'popd' to pop out the last pushed directory. ",
-    "Success": "/USA/CA/ /USA/NY/ ",
-    "Title": "popd"
-  },
-  "Lesson13": {
-    "id": 13,
-    "Answer": "",
-    "Error": "Seems like your answer is a little off. Try again.",
-    "Hint1": "",
-    "Hint2": "Sleepy....  :-o Zzzzz",
-    "Instructions": "",
-    "Question": "Please type '' ",
-    "Success": "",
-    "Title": "pushd"
-  },
-  "Lesson14": {
-    "id": 14,
-    "Answer": "",
-    "Error": "Seems like your answer is a little off. Try again.",
-    "Hint1": "",
-    "Hint2": "Sleepy....  :-o Zzzzz",
-    "Instructions": "",
-    "Question": "Please type '' ",
-    "Success": "",
-    "Title": ""
-  },
-  "Lesson15": {
-    "id": 15,
-    "Answer": "",
-    "Error": "Seems like your answer is a little off. Try again.",
-    "Hint1": "",
-    "Hint2": "Sleepy....  :-o Zzzzz",
-    "Instructions": "",
-    "Question": "Please type '' ",
-    "Success": "",
-    "Title": ""
-  }
+    "Error" : "Seems like you didn't type change your directory to 'usa'.  Try again.",
+    "Hint" : "You need to Change the Directory to 'usa' continue.",
+    "ID" : 3,
+    "Instructions" : "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: 'cd usa' will change your working directory to /BustinBash/usa'.",
+    "Question" : "Change your current directory to /usa",
+    "Success" : "/usa",
+    "Target" : "usa",
+    "Title" : "Change Directory"
+    },
+
+    "Lesson4" : {
+    "Answer" : "cd ..",
+    "Branches" : [ "ca", "ny", "tx" ],
+    "Error" : "Seems like you didn't traverse up one level in your directory.  Try again.",
+    "Hint" : "Please Change Directories to continue.",
+    "ID" : 4,
+    "Instructions" : "You can change up directories by using the 'cd' command combined with the '..' syntax. This will move up on level in your directory tree. You can travel up as many levels as you want. For example, to travel up three levels, you would type: 'cd ../../../'",
+    "Question" : "Change your current directory to /BustinBash",
+    "Success" : "/BustinBash",
+    "Target" : "BustinBash",
+    "Title" : "Change Directory"
+    },
+    "Lesson5" : {
+    "Answer" : "cd /usa/ca/san_francisco",
+    "Branches" : [ 
+        "ca",
+        "ny", 
+        "tx"  
+        ],
+    "Error" : "Seems like you didn't navigate to the proper directory.  Try again.",
+    "Hint" : "Please change to the '/usa/ca/san_francisco' directory to continue.",
+    "ID" : 5,
+    "Instructions" : "You can cd into a directory fast by specifiying the path to that folder. If I wanted to cd into newyork_city I would type 'cd usa/ny/newyork_city'.",
+    "Question" : "Change directories to san_francisco'.",
+    "Success" : "/usa/ca/san_francisco",
+    "Target" : "san_francisco",
+    "Title" : "Change Directory"
+    },
+    "Lesson6" : {
+    "Answer" : "mkdir ohio",
+    "Branches" : "",
+    "Error" : "Seems like you didn't create a directory called 'ohio'.  Try again!",
+    "Hint" : "You'll want to make use of the 'mkdir' command",
+    "ID" : 6,
+    "Instructions" : "Creating directories is an integral part of using Bash. A directory is a folder on your computer that contains other folders and files. To create a new directory we use the 'mkdir' command followed by the directory name.",
+    "Question" : "Make a new directory in the usa directory called ohio.",
+    "Success" : "mkdir ohio",
+    "Target" : "",
+    "Title" : "Make Directory"
+    },
+    "Lesson7" : {
+    "Answer" : "rmdir ohio",
+    "Branches" : "",
+    "Error" : "Seems like you didn't delete the directory correctly.  Try again.",
+    "Hint" : "Please delete the directory Ohio to continue.",
+    "ID" : 7,
+    "Instructions" : "You can remove a folder easily with 'rmdir' followed by the directory name.",
+    "Question" : "Delete the ohio directory",
+    "Success" : "Maybe, put a message here",
+    "Target" : "",
+    "Title" : "Remove Directory"
+    },
+    "Lesson8" : {
+    "Answer" : "echo Bustin Bash",
+    "Error" : "Seems like you didn't type the command correctly.  Try again.",
+    "Hint" : "try typing something like 'echo your sentence here.'",
+    "ID" : 8,
+    "Instructions" : "The command 'echo' is used display text to the console. For example, '$echo Hey Universe' prints 'Hey Universe' to the screen. This is an example of Bash's STDOUT, or Standard Output, which is the output of a command. ",
+    "Question" : "Print 'Bustin Bash' out to the console.",
+    "Success" : "Bustin Bash",
+    "Title" : "echo/STDOUT"
+    },
+    "Lesson9" : {
+    "Answer" : "touch the_bay.txt",
+    "Error" : "oops! Looks like you didn't create a new file called the_bay.txt",
+    "Hint" : "just type touch then the filename to create a new file",
+    "ID" : 9,
+    "Instructions" : "You can create new files easily with the touch command. Creating a new file is super easy! Just type 'touch' then the name of the file you would like to create.",
+    "Question" : "Create a new file called the_bay.txt",
+    "Success" : "",
+    "Title" : "touch"
+    }
 }
