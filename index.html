@@ -168,16 +168,91 @@
 
               <div id='content'>
                 <div class="directory" id="directory_popup">
-                  <ul id='directory-images'>
+                  <div class="row clearfix">
+                    <div class="column fifth" id="divider1">
+                      <!--Home-->
+                      <ul class="countries">
+                        <li>
+                          <img class='folder-icon' src="images/icons/folder.png">
+                          <span class="folder-text">usa</span>
+                          <span class="pointer">&#9654</span>
+                        </li>
+                        <li>
+                          <img class='folder-icon' src="images/icons/folder.png">
+                          <span class="folder-text">canada</span>
+                          <span class="pointer">&#9654</span>
+                        </li>
+                        <li>
+                          <img class='folder-icon' src="images/icons/folder.png">
+                          <span class="folder-text">mexico</span>
+                          <span class="pointer">&#9654</span>
+                        </li>
+                      </ul> 
+                    </div>
+                    <!-- Branch 1 -->
+                    <div class="column fifth" id="divider2">
+                      <ul class="states">
+                        <li>
+                          <img class='folder-icon' src="images/icons/folder.png">
+                          <span class="folder-text">ca</span>
+                          <span class="pointer">&#9654</span>
+                        </li>
+                          <li>
+                          <img class='folder-icon' src="images/icons/folder.png">
+                          <span class="folder-text">ny</span>
+                          <span class="pointer">&#9654</span>
+                        </li>
+                          <li>
+                          <img class='folder-icon' src="images/icons/folder.png">
+                          <span class="folder-text">tx</span>
+                          <span class="pointer">&#9654</span>
+                        </li>
+                      </ul> 
+                    </div>
 
+                    <!-- Branch 2 -->
+                    <div class="column fifth" id="divider3">
+                      <ul class="cities">
+                        <li>
+                          <img class='folder-icon' src="images/icons/folder.png">
+                          <span class="folder-text">san_francisco</span>
+                          <span class="pointer">&#9654</span>
+                        </li>
+                        <li>
+                          <img class='folder-icon' src="images/icons/folder.png">
+                          <span class="folder-text">newyork_city</span>
+                          <span class="pointer">&#9654</span>
+                        </li>
+                        <li>
+                          <img class='folder-icon' src="images/icons/folder.png">
+                          <span class="folder-text">austin</span>
+                          <span class="pointer">&#9654</span>
+                        </li>
+                      </ul> 
+                    </div>
 
-                    <li>
-                      <img class='folder-icon' src="images/icons/folder.png">
-                      <span class="folder-text">USA</span>
-                    </li>
+                    <!-- Branch 3 -->
 
+                    <div class='column fifth' id="divider4">
+                      <ul class="places">
+                        <li>
+                          <img class='folder-icon' src="images/icons/text.png">
+                          <span class="folder-text">ggpark.txt</span>
+                        </li>
+                        <li>
+                          <img class='folder-icon' src="images/icons/text.png">
+                          <span class="folder-text">crissyfield.txt</span>
+                        </li>
+                        <li>
+                          <img class='folder-icon' src="images/icons/text.png">
+                          <span class="folder-text">the_bay.txt</span>
+                        </li>
+                      </ul> 
 
-                  </ul>
+                    </div>
+
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -185,6 +260,7 @@
 
         </div>
       </div>
+      <!--End of Directory-->
       <!-- Cool Tips about bash -->
       <div class="column third">Tips</div>
     </div>
@@ -215,14 +291,6 @@
     <!-- Hints -->
     <script id="hints-template" type="text/x-handlebars-template">
     <p>{{hint}}</p>
-    </script>
-
-    <!-- Directory -->
-
-    <script id="directory-template" type="text/x-handlebars-template">
-    {{#each folderCollection}}
-    <li><img class='folder-icon' src='images/icons/folder.png'><span class='folder-text'>{{this}}</span></li>
-    {{/each}}
     </script>
 
     <!-- instruction -->

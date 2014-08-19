@@ -130,8 +130,7 @@ div.footer{
   html { font-size: 100%; }
   .column {
       float: left;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 5px;
     }
 
     .column.full { width: 100%; }
@@ -139,6 +138,11 @@ div.footer{
     .column.half { width: 50%; }
     .column.third { width: 33.3%; }
     .column.fourth { width: 25%; }
+    .column.fifth { 
+      width: 19%;
+      height: 100%;
+      border-left: thin solid #bdc3c7;
+     }
     .column.flow-opposite { float: right; }
 }
 
@@ -147,8 +151,7 @@ div.footer{
   html { font-size: 112%; }
   .column {
       float: left;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 5px;
     }
 
     .column.full { width: 100%; }
@@ -156,6 +159,11 @@ div.footer{
     .column.half { width: 50%; }
     .column.third { width: 33.3%; }
     .column.fourth { width: 25%; }
+    .column.fifth { 
+      width: 19%;
+      height: 100%;
+      border-left: thin solid #bdc3c7;
+     }
     .column.flow-opposite { float: right; }
 }
 
@@ -164,8 +172,7 @@ div.footer{
   html { font-size: 120%; }
   .column {
       float: left;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      padding-left: 5px;
     }
 
     .column.full { width: 100%; }
@@ -173,6 +180,12 @@ div.footer{
     .column.half { width: 50%; }
     .column.third { width: 33.3%; }
     .column.fourth { width: 25%; }
+    .column.fifth { width: 19%; }
+    .column.fifth { 
+      width: 19%;
+      height: 100%;
+      border-left: thin solid #bdc3c7;
+     }
     .column.flow-opposite { float: right; }
 }
 
