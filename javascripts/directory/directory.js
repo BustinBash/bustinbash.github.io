@@ -7,25 +7,20 @@ BustinBash.Directory.View.prototype = {
 		},
 
 		2: function(data){
-			$('.states').show();
-			$('#divider3').show();
-			$('.current-folder').text(data.Target)
+			$('.states, #divider3').show();
+			this.appendCurrentFolder(data.Target)
+			this.clearDom()
 		},
 		3: function(data){
-			$('.states').hide();
-			$('#divider3').hide();
-			$('.places').hide();
+			$('.states, .places, #divider3').hide();
 			$('#divider4').show();
-			$('.states').hide();
-			$('.current-folder').text(data.Target)
+			this.appendCurrentFolder(data.Target)
+			this.clearDom()
 		},
 		4: function(data){
-			$('.states').show();
-			$('#divider3').show();
-			$('.cities').show()
-			$('#divider4').show();
-			$('.places').show()
-			$('.current-folder').text(data.Target)
+			$('.states, .cities, .places, #divider3, #divider4').show();
+			this.appendCurrentFolder(data.Target)
+			this.clearDom()
 		},
 		5: function(){
 
