@@ -5,8 +5,8 @@ $(document).ready(function(){
   lsc.init();
   // Database
   var dbc = new BustinBash.Database.Controller
-  var database = new BustinBash.Database.Model
-  database.fetch(dbc)
+  var database = new BustinBash.Database.Model(dbc)
+  database.fetch()
 
   // Master
   var mc = new BustinBash.Master.Controller
