@@ -2,50 +2,82 @@ BustinBash.Directory.View = function() {}
 
 BustinBash.Directory.View.prototype = {
 	functionCollection: {
+		// ~> pwd
 		1: function() {
 
 		},
 
+		// ~> ls
 		2: function(data){
 
 		},
+
+		// ~> cd usa
 		3: function(data){
 			$('.states, #divider3').show();
 			this.appendCurrentFolder(data.Target)
 			this.clearDom()
 		},
+
+		// ~> cd ..
 		4: function(data){
 			$('.states, .places, #divider3').hide();
 			$('#divider4').show();
 			this.appendCurrentFolder(data.Target)
 			this.clearDom()
 		},
+
+		// ~> cd usa/ca/san_francisco
 		5: function(data){
 			$('.states, .cities, .places, #divider3, #divider4').show();
 			this.appendCurrentFolder(data.Target)
 			this.clearDom()
 		},
-		6: function(){
 
+		// ~> touch the_bay.txt
+		6: function(data){
+
+			this.appendCurrentFolder(data.Target)
+			this.clearDom()
 		},
 
-		7: function(){
+		// ~> rm the_bay.txt
+		7: function(data){
 
+			this.appendCurrentFolder(data.Target)
+			this.clearDom()
 		},
 
-		8: function(){
-
+		// ~> cd ..
+		8: function(data){
+			$('.places').hide();
+			this.appendCurrentFolder(data.Target)
+			this.clearDom()
 		},
 
-		9: function(){
-
+		// ~> mkdir marin
+		9: function(data){
+			$('#marin').show();
+			this.appendCurrentFolder(data.Target)
+			this.clearDom()
 		},
 
-		10: function(){
-
+		// ~> rmdir marin
+		10: function(data){
+			$('#marin').hide();
+			this.appendCurrentFolder(data.Target)
+			this.clearDom()
 		},
 
 		11: function(){
+
+		},
+
+		12: function(){
+
+		},
+
+		13: function(){
 
 		},
 
