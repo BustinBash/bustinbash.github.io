@@ -1,7 +1,11 @@
 //------- View -----------
 BustinBash.Lessons.View = function() {}
 
-BustinBash.Lessons.View.prototype = {}
+BustinBash.Lessons.View.prototype = {
+  render: function(navigationButton) {
+
+}
+}
 
 //----- Controller -------
 
@@ -22,8 +26,24 @@ BustinBash.Lessons.Controller.prototype = {
 },
 
  createNavigationButtons: function(data) {
+  /*
+  loop through data using .keys to extract the keys
+  create custom html strings to pass to view to append to div
+  */
+  // debugger
+  var lessonArray = Object.keys(data)
 
- }
+
+  for (var i = 0; i < lessonArray.length; i++) {
+    this.view.render("<div class='tooltip levels' id='" + lessonArray[i] + "' data-tooltip-content='" + data[lessonArray[i]].Title + "'><img class='little' src='images/terminal.png'></div>")
+  }
 }
 
 
+}
+
+/*
+
+Object.keys(data)[0];
+
+*/
