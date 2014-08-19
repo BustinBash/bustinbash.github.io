@@ -13,7 +13,7 @@ BustinBash.Directory.View.prototype = {
 		},
 		3: function(data){
 			$('.states, .places, #divider3').hide();
-			$('#divider4').show();
+			$('#divider4').show();	
 			this.appendCurrentFolder(data.Target)
 			this.clearDom()
 		},
@@ -83,7 +83,7 @@ BustinBash.Directory.Controller.prototype = {
 
 	thisLevel: function(data){
 		var id = data.ID - 1
-		this.view.functionCollection[id](data);
+		this.view.functionCollection[id](data);a
 	},
 
 	checkLevel: function(data) {
