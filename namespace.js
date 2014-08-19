@@ -1,13 +1,14 @@
 var BustinBash = {
-  Directory: {},
-  Instruction: {},
-  Question: {},
-  Terminal: {},
-  Hints: {},
-  Database: {},
-  Master: {},
-  Title: {},
-  Storage: {}
+  Directory:    {},
+  Instruction:  {},
+  Question:     {},
+  Terminal:     {},
+  Hints:        {},
+  Database:     {},
+  Master:       {},
+  Title:        {},
+  Lessons:      {},
+  Storage:      {}
 }
 
 

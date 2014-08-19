@@ -63,7 +63,7 @@
     "Title" : "Change Directory"
     },
     "Lesson5" : {
-    "Answer" : "cd /usa/ca/san_francisco",
+    "Answer" : "cd usa/ca/san_francisco",
     "Branches" : [ 
         "ca",
         "ny", 
@@ -74,7 +74,7 @@
     "ID" : 5,
     "Instructions" : "You can cd into a directory fast by specifiying the path to that folder. If I wanted to cd into newyork_city I would type 'cd usa/ny/newyork_city'.",
     "Question" : "Change directories to san_francisco'.",
-    "Success" : "/usa/ca/san_francisco",
+    "Success" : "usa/ca/san_francisco",
     "Target" : "san_francisco",
     "Title" : "Change Directory"
     },

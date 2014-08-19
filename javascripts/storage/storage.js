@@ -4,7 +4,7 @@ BustinBash.Storage.Model = function(){
 
 BustinBash.Storage.Model.prototype = {
 	loadStorage: function(){
-		Storage.setItem("levels", this.storage)
+		localStorage.setItem("levels", this.storage)
 	}	
 }
 BustinBash.Storage.Controller = function(model){
