@@ -4,24 +4,28 @@ BustinBash.Terminal.View.prototype = {
   input: function() {
     return $('input').val();
   },
+
   renderSuccess: function(value, input) {
     var source   = $("#terminal-success-template").html();
     var template = Handlebars.compile(source);
-    var context = {success: value, input: input}
-    var text    = template(context);
-    $('.feed').append(text)
-    $('input').val("");
-
+    var context  = {success: value, input: input}
+    var text     = template(context);
+    this.updateDOM(text);
   },
+
   renderError: function(value, input) {
     var source   = $("#terminal-error-template").html();
     var template = Handlebars.compile(source);
-    var context = {error: value, input: input}
-    var text    = template(context);
+    var context  = {error: value, input: input}
+    var text     = template(context);
+    this.updateDOM(text);
+  },
+
+  updateDOM: function(text) {
     $('.feed').append(text)
     $('input').val("");
-  }
-
+    $('.feed').scrollTop($('.feed')[0].scrollHeight);
+ }
 }
 
 BustinBash.Terminal.Controller = function(view) {
