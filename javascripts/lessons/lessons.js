@@ -3,8 +3,7 @@ BustinBash.Lessons.View = function() {}
 
 BustinBash.Lessons.View.prototype = {
   render: function(navigationButton) {
-    console.log(navigationButton)
-    // $('#navbar_popup').append('hello!')
+    $('#navbar_popup').append(navigationButton)
 }
 }
 
@@ -21,7 +20,6 @@ BustinBash.Lessons.Controller.prototype = {
 
  bindListeners: function() {
   $(document).on('getData', function(event, data) {
-    debugger
       this.db = data
       this.createNavigationButtons(data);
     }.bind(this))
