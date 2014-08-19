@@ -51,6 +51,7 @@ div.navbar{
 }
 
 .logo{
+  float: right;
   height: 75px;
   width: 75px;
 }
@@ -138,7 +139,7 @@ div.footer{
     .column.half { width: 50%; }
     .column.third { width: 33.3%; }
     .column.fourth { width: 25%; }
-    .column.fifth { 
+    .column.fifth {
       width: 19%;
       height: 100%;
       border-left: thin solid #bdc3c7;
@@ -159,7 +160,7 @@ div.footer{
     .column.half { width: 50%; }
     .column.third { width: 33.3%; }
     .column.fourth { width: 25%; }
-    .column.fifth { 
+    .column.fifth {
       width: 19%;
       height: 100%;
       border-left: thin solid #bdc3c7;
@@ -181,7 +182,7 @@ div.footer{
     .column.third { width: 33.3%; }
     .column.fourth { width: 25%; }
     .column.fifth { width: 19%; }
-    .column.fifth { 
+    .column.fifth {
       width: 19%;
       height: 100%;
       border-left: thin solid #bdc3c7;
