@@ -7,24 +7,25 @@ BustinBash.Directory.View.prototype = {
 		},
 
 		2: function(data){
-			this.clearDom();
-			var currentFolder = data.Target
-			this.appendCurrentFolder(currentFolder)
-			var folders = data.Branches
-			this.render(folders)
+			$('.states').show();
+			$('#divider3').show();
+			$('.current-folder').text(data.Target)
 		},
-		render: function(folders){
-			var source   = $("#directory-template").html();
-			var template = Handlebars.compile(source);
-			var context = {folderCollection: folders }
-			var text    = template(context);
-			$('#directory-images').html(text)
+		3: function(data){
+			$('.states').hide();
+			$('#divider3').hide();
+			$('.places').hide();
+			$('#divider4').show();
+			$('.states').hide();
+			$('.current-folder').text(data.Target)
 		},
-		3: function(){
-
-		},
-		4: function(){
-
+		4: function(data){
+			$('.states').show();
+			$('#divider3').show();
+			$('.cities').show()
+			$('#divider4').show();
+			$('.places').show()
+			$('.current-folder').text(data.Target)
 		},
 		5: function(){
 
@@ -77,11 +78,17 @@ BustinBash.Directory.Controller.prototype = {
 	bindListeners: function() {
 		$(document).on('changeLevel', function(event, data) {
 			this.data = data;
+			this.thisLevel(data)
 		}.bind(this));
 
 		$(document).on('success', function() {
 			this.checkLevel(this.data)
 		}.bind(this));
+	},
+
+	thisLevel: function(data){
+		var id = data.ID - 1
+		this.view.functionCollection[id](data);
 	},
 
 	checkLevel: function(data) {
