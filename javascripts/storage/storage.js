@@ -1,10 +1,10 @@
 BustinBash.Storage.Model = function(){
-	this.storage = []
+	this.currentLesson = ""
 }
 
 BustinBash.Storage.Model.prototype = {
 	loadStorage: function(){
-		Storage.setItem("levels", this.storage)
+		localStorage.setItem("lesson", this.currentLesson)
 	}	
 }
 BustinBash.Storage.Controller = function(model){
@@ -17,11 +17,11 @@ BustinBash.Storage.Controller.prototype = {
 	},
 	bindListeners: function(){
 		$(document).on('success', function(event, data){
-			this.addLevelToLocalStorage(data().ID);
+			this.setLesson(data().ID);
 			this.model.loadStorage()
 		}.bind(this));
 	},
-	addLevelToLocalStorage: function(id){
-		this.model.storage.push(id)
+	setLesson: function(id){
+		this.model.currentLesson = id
 	}
 }
