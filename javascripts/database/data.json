@@ -1,7 +1,11 @@
 {
   "Lesson1" : {
     "Answer" : "pwd",
-    "Branches" : "",
+    "Branches" : [
+        "usa",
+        "mexico",
+        "canada"
+    ],
     "Error" : "Seems like you didn't print the working directory.  Try again.",
     "Hint" : "You want to Print the Working Directory to continue.",
     "ID" : 1,
@@ -10,56 +14,71 @@
     "Success" : "/BustinBash",
     "Target" : "",
     "Title" : "Print Working Directory"
-  },
-  "Lesson2" : {
+    },
+
+    "Lesson2" : {
+    "Answer" : "ls",
+    "Branches" : [
+        "usa",
+        "mexico",
+        "canada"
+    ],
+    "Error" : "Seems like you didn't type 'ls'.  Try again.",
+    "Hint" : "List the Directory.",
+    "ID" : 2,
+    "Instructions" : "ls is used to display the contents of a directory. It is an extremely useful command that you'll use all the time, so get use to it! ",
+    "Question" : "Display the contents of the current directory..",
+    "Success" : "ca ny tx",
+    "Target" : "",
+    "Title" : "List Directory / Files"
+    },
+
+    "Lesson3" : {
     "Answer" : "cd usa",
-    "Branches" : [ "ca", "ny", "tx" ],
+    "Branches" : [ 
+        "ca",
+        "ny", 
+        "tx" 
+    ],
     "Error" : "Seems like you didn't type change your directory to 'usa'.  Try again.",
     "Hint" : "You need to Change the Directory to 'usa' continue.",
-    "ID" : 2,
+    "ID" : 3,
     "Instructions" : "cd (change directory): This command accepts arguments in the form of file structure in order to traverse the system.  For example: 'cd usa' will change your working directory to /BustinBash/usa'.",
     "Question" : "Change your current directory to /usa",
     "Success" : "/usa",
     "Target" : "usa",
     "Title" : "Change Directory"
-  },
-  "Lesson3" : {
+    },
+
+    "Lesson4" : {
     "Answer" : "cd ..",
-    "Branches" : [ "usa" ],
+    "Branches" : [ "ca", "ny", "tx" ],
     "Error" : "Seems like you didn't traverse up one level in your directory.  Try again.",
     "Hint" : "Please Change Directories to continue.",
-    "ID" : 3,
+    "ID" : 4,
     "Instructions" : "You can change up directories by using the 'cd' command combined with the '..' syntax. This will move up on level in your directory tree. You can travel up as many levels as you want. For example, to travel up three levels, you would type: 'cd ../../../'",
     "Question" : "Change your current directory to /BustinBash",
     "Success" : "/BustinBash",
     "Target" : "BustinBash",
     "Title" : "Change Directory"
-  },
-  "Lesson4" : {
+    },
+    "Lesson5" : {
     "Answer" : "cd /usa/ca/san_francisco",
-    "Branches" : [ "ggpark.txt, crissyfield.txt" ],
+    "Branches" : [ 
+        "ca",
+        "ny", 
+        "tx"  
+        ],
     "Error" : "Seems like you didn't navigate to the proper directory.  Try again.",
     "Hint" : "Please change to the '/usa/ca/san_francisco' directory to continue.",
-    "ID" : 4,
+    "ID" : 5,
     "Instructions" : "You can cd into a directory fast by specifiying the path to that folder. If I wanted to cd into newyork_city I would type 'cd usa/ny/newyork_city'.",
     "Question" : "Change directories to san_francisco'.",
     "Success" : "/usa/ca/san_francisco",
     "Target" : "san_francisco",
     "Title" : "Change Directory"
-  },
-  "Lesson5" : {
-    "Answer" : "ls",
-    "Branches" : "",
-    "Error" : "Seems like you didn't type 'ls'.  Try again.",
-    "Hint" : "List the Directory.",
-    "ID" : 5,
-    "Instructions" : "ls (list directory / files): This command displays the contents of a directory.",
-    "Question" : "Display the contents of the current directory..",
-    "Success" : "ggpark.txt crissyfield.txt",
-    "Target" : "",
-    "Title" : "List Directory / Files"
-  },
-  "Lesson6" : {
+    },
+    "Lesson6" : {
     "Answer" : "mkdir ohio",
     "Branches" : "",
     "Error" : "Seems like you didn't create a directory called 'ohio'.  Try again!",
@@ -70,8 +89,8 @@
     "Success" : "mkdir ohio",
     "Target" : "",
     "Title" : "Make Directory"
-  },
-  "Lesson7" : {
+    },
+    "Lesson7" : {
     "Answer" : "rmdir ohio",
     "Branches" : "",
     "Error" : "Seems like you didn't delete the directory correctly.  Try again.",
@@ -82,8 +101,8 @@
     "Success" : "Maybe, put a message here",
     "Target" : "",
     "Title" : "Remove Directory"
-  },
-  "Lesson8" : {
+    },
+    "Lesson8" : {
     "Answer" : "echo Bustin Bash",
     "Error" : "Seems like you didn't type the command correctly.  Try again.",
     "Hint" : "try typing something like 'echo your sentence here.'",
@@ -92,8 +111,8 @@
     "Question" : "Print 'Bustin Bash' out to the console.",
     "Success" : "Bustin Bash",
     "Title" : "echo/STDOUT"
-  },
-  "Lesson9" : {
+    },
+    "Lesson9" : {
     "Answer" : "touch the_bay.txt",
     "Error" : "oops! Looks like you didn't create a new file called the_bay.txt",
     "Hint" : "just type touch then the filename to create a new file",
@@ -102,5 +121,5 @@
     "Question" : "Create a new file called the_bay.txt",
     "Success" : "",
     "Title" : "touch"
-  }
+    }
 }

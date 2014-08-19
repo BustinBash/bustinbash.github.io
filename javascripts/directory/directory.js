@@ -7,23 +7,23 @@ BustinBash.Directory.View.prototype = {
 		},
 
 		2: function(data){
+			
+		},
+		3: function(data){
 			$('.states, #divider3').show();
 			this.appendCurrentFolder(data.Target)
 			this.clearDom()
 		},
-		3: function(data){
+		4: function(data){
 			$('.states, .places, #divider3').hide();
 			$('#divider4').show();	
 			this.appendCurrentFolder(data.Target)
 			this.clearDom()
 		},
-		4: function(data){
+		5: function(){
 			$('.states, .cities, .places, #divider3, #divider4').show();
 			this.appendCurrentFolder(data.Target)
 			this.clearDom()
-		},
-		5: function(){
-
 		},
 		6: function(){
 
