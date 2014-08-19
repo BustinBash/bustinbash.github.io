@@ -1,3 +1,12 @@
+.states, 
+.cities, 
+.places,
+#divider3,
+#divider4,
+#divider5{
+  display: none;
+}
+
 .pointer {
   /*display: inline-block;*/
   /*text-align: right;*/

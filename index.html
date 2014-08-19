@@ -207,9 +207,9 @@
               <div id='content'>
                 <div class="directory" id="directory_popup">
                   <div class="row clearfix">
-                    <div class="column fifth">
+                    <div class="column fifth" id="divider1">
                       <!--Home-->
-                      <ul>
+                      <ul class="countries">
                         <li>
                           <img class='folder-icon' src="images/icons/folder.png">
                           <span class="folder-text">usa</span>
@@ -228,8 +228,8 @@
                       </ul> 
                     </div>
                     <!-- Branch 1 -->
-                    <div class="column fifth">
-                      <ul>
+                    <div class="column fifth" id="divider2">
+                      <ul class="states">
                         <li>
                           <img class='folder-icon' src="images/icons/folder.png">
                           <span class="folder-text">ca</span>
@@ -249,8 +249,8 @@
                     </div>
 
                     <!-- Branch 2 -->
-                    <div class="column fifth">
-                      <ul>
+                    <div class="column fifth" id="divider3">
+                      <ul class="cities">
                         <li>
                           <img class='folder-icon' src="images/icons/folder.png">
                           <span class="folder-text">san_francisco</span>
@@ -271,19 +271,19 @@
 
                     <!-- Branch 3 -->
 
-                    <div class='column fifth'>
-                      <ul>
+                    <div class='column fifth' id="divider4">
+                      <ul class="places">
                         <li>
                           <img class='folder-icon' src="images/icons/text.png">
-                          <span class="folder-text">one</span>
+                          <span class="folder-text">ggpark.txt</span>
                         </li>
                         <li>
                           <img class='folder-icon' src="images/icons/text.png">
-                          <span class="folder-text">two</span>
+                          <span class="folder-text">crissyfield.txt</span>
                         </li>
                         <li>
                           <img class='folder-icon' src="images/icons/text.png">
-                          <span class="folder-text">three</span>
+                          <span class="folder-text">the_bay.txt</span>
                         </li>
                       </ul> 
 
@@ -329,14 +329,6 @@
     <!-- Hints -->
     <script id="hints-template" type="text/x-handlebars-template">
     <p>{{hint}}</p>
-    </script>
-
-    <!-- Directory -->
-
-    <script id="directory-template" type="text/x-handlebars-template">
-    {{#each folderCollection}}
-    <li><img class='folder-icon' src='images/icons/folder.png'><span class='folder-text'>{{this}}</span></li>
-    {{/each}}
     </script>
 
     <!-- instruction -->
