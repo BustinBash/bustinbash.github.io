@@ -63,7 +63,7 @@
     "Title" : "Change Directory"
     },
     "Lesson5" : {
-    "Answer" : "cd /usa/ca/san_francisco",
+    "Answer" : "cd usa/ca/san_francisco",
     "Branches" : [ 
         "ca",
         "ny", 
@@ -74,31 +74,35 @@
     "ID" : 5,
     "Instructions" : "You can cd into a directory fast by specifiying the path to that folder. If I wanted to cd into newyork_city I would type 'cd usa/ny/newyork_city'.",
     "Question" : "Change directories to san_francisco'.",
-    "Success" : "/usa/ca/san_francisco",
+    "Success" : "usa/ca/san_francisco",
     "Target" : "san_francisco",
     "Title" : "Change Directory"
     },
     "Lesson6" : {
-    "Answer" : "mkdir ohio",
-    "Branches" : "",
-    "Error" : "Seems like you didn't create a directory called 'ohio'.  Try again!",
+    "Answer" : "mkdir marin",
+    "Branches" : [
+        "ggpark.txt",
+        "crissyfield.txt",
+        "giants.txt"
+    ],
+    "Error" : "Seems like you didn't create a directory called 'marin'.  Try again!",
     "Hint" : "You'll want to make use of the 'mkdir' command",
     "ID" : 6,
     "Instructions" : "Creating directories is an integral part of using Bash. A directory is a folder on your computer that contains other folders and files. To create a new directory we use the 'mkdir' command followed by the directory name.",
-    "Question" : "Make a new directory in the usa directory called ohio.",
-    "Success" : "mkdir ohio",
+    "Question" : "Make a new directory in the san_francisco directory called marin.",
+    "Success" : "mkdir marin",
     "Target" : "",
     "Title" : "Make Directory"
     },
     "Lesson7" : {
-    "Answer" : "rmdir ohio",
+    "Answer" : "rmdir marin",
     "Branches" : "",
     "Error" : "Seems like you didn't delete the directory correctly.  Try again.",
-    "Hint" : "Please delete the directory Ohio to continue.",
+    "Hint" : "Please delete the directory marin to continue.",
     "ID" : 7,
     "Instructions" : "You can remove a folder easily with 'rmdir' followed by the directory name.",
-    "Question" : "Delete the ohio directory",
-    "Success" : "Maybe, put a message here",
+    "Question" : "Delete the marin directory",
+    "Success" : "",
     "Target" : "",
     "Title" : "Remove Directory"
     },
@@ -121,5 +125,6 @@
     "Question" : "Create a new file called the_bay.txt",
     "Success" : "",
     "Title" : "touch"
-    }
+    },
+
 }

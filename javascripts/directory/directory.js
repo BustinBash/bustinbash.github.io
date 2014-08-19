@@ -20,7 +20,7 @@ BustinBash.Directory.View.prototype = {
 			this.appendCurrentFolder(data.Target)
 			this.clearDom()
 		},
-		5: function(){
+		5: function(data){
 			$('.states, .cities, .places, #divider3, #divider4').show();
 			this.appendCurrentFolder(data.Target)
 			this.clearDom()
