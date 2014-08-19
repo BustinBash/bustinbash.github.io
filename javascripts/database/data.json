@@ -1,11 +1,7 @@
 {
-  "Lesson1" : {
+  "Lesson01" : {
     "Answer" : "pwd",
-    "Branches" : [
-        "usa",
-        "mexico",
-        "canada"
-    ],
+    "Branches" : [ "usa", "mexico", "canada" ],
     "Error" : "Seems like you didn't print the working directory.  Try again.",
     "Hint" : "You want to Print the Working Directory to continue.",
     "ID" : 1,
@@ -14,15 +10,32 @@
     "Success" : "/BustinBash",
     "Target" : "",
     "Title" : "Print Working Directory"
-    },
-
-    "Lesson2" : {
+  },
+  "Lesson10" : {
+    "Answer" : "rmdir marin",
+    "Branches" : "",
+    "Error" : "Seems like you didn't delete the directory correctly.  Try again.",
+    "Hint" : "Please delete the directory marin to continue.",
+    "ID" : 10,
+    "Instructions" : "You can remove a folder easily with 'rmdir' followed by the directory name.",
+    "Question" : "Delete the marin directory",
+    "Success" : "",
+    "Target" : "san_francisco",
+    "Title" : "Remove Directory"
+  },
+  "Lesson11" : {
+    "Answer" : "echo Bustin Bash",
+    "Error" : "Seems like you didn't type the command correctly.  Try again.",
+    "Hint" : "try typing something like 'echo your sentence here.'",
+    "ID" : 11,
+    "Instructions" : "The command 'echo' is used display text to the console. For example, '$echo Hey Universe' prints 'Hey Universe' to the screen. This is an example of Bash's STDOUT, or Standard Output, which is the output of a command. ",
+    "Question" : "Print 'Bustin Bash' out to the console.",
+    "Success" : "Bustin Bash",
+    "Title" : "echo/STDOUT"
+  },
+  "Lesson02" : {
     "Answer" : "ls",
-    "Branches" : [
-        "usa",
-        "mexico",
-        "canada"
-    ],
+    "Branches" : [ "usa", "mexico", "canada" ],
     "Error" : "Seems like you didn't type 'ls'.  Try again.",
     "Hint" : "List the Directory.",
     "ID" : 2,
@@ -31,15 +44,10 @@
     "Success" : "ca ny tx",
     "Target" : "",
     "Title" : "List Directory / Files"
-    },
-
-    "Lesson3" : {
+  },
+  "Lesson03" : {
     "Answer" : "cd usa",
-    "Branches" : [ 
-        "ca",
-        "ny", 
-        "tx" 
-    ],
+    "Branches" : [ "ca", "ny", "tx" ],
     "Error" : "Seems like you didn't type change your directory to 'usa'.  Try again.",
     "Hint" : "You need to Change the Directory to 'usa' continue.",
     "ID" : 3,
@@ -48,9 +56,8 @@
     "Success" : "/usa",
     "Target" : "usa",
     "Title" : "Change Directory"
-    },
-
-    "Lesson4" : {
+  },
+  "Lesson04" : {
     "Answer" : "cd ..",
     "Branches" : [ "ca", "ny", "tx" ],
     "Error" : "Seems like you didn't traverse up one level in your directory.  Try again.",
@@ -61,14 +68,10 @@
     "Success" : "/BustinBash",
     "Target" : "BustinBash",
     "Title" : "Change Directory"
-    },
-    "Lesson5" : {
+  },
+  "Lesson05" : {
     "Answer" : "cd usa/ca/san_francisco",
-    "Branches" : [ 
-        "ca",
-        "ny", 
-        "tx"  
-        ],
+    "Branches" : [ "ca", "ny", "tx" ],
     "Error" : "Seems like you didn't navigate to the proper directory.  Try again.",
     "Hint" : "Please change to the '/usa/ca/san_francisco' directory to continue.",
     "ID" : 5,
@@ -77,54 +80,49 @@
     "Success" : "usa/ca/san_francisco",
     "Target" : "san_francisco",
     "Title" : "Change Directory"
-    },
-    "Lesson6" : {
-    "Answer" : "mkdir marin",
-    "Branches" : [
-        "ggpark.txt",
-        "crissyfield.txt",
-        "giants.txt"
-    ],
-    "Error" : "Seems like you didn't create a directory called 'marin'.  Try again!",
-    "Hint" : "You'll want to make use of the 'mkdir' command",
-    "ID" : 6,
-    "Instructions" : "Creating directories is an integral part of using Bash. A directory is a folder on your computer that contains other folders and files. To create a new directory we use the 'mkdir' command followed by the directory name.",
-    "Question" : "Make a new directory in the san_francisco directory called marin.",
-    "Success" : "mkdir marin",
-    "Target" : "",
-    "Title" : "Make Directory"
-    },
-    "Lesson7" : {
-    "Answer" : "rmdir marin",
-    "Branches" : "",
-    "Error" : "Seems like you didn't delete the directory correctly.  Try again.",
-    "Hint" : "Please delete the directory marin to continue.",
-    "ID" : 7,
-    "Instructions" : "You can remove a folder easily with 'rmdir' followed by the directory name.",
-    "Question" : "Delete the marin directory",
-    "Success" : "",
-    "Target" : "",
-    "Title" : "Remove Directory"
-    },
-    "Lesson8" : {
-    "Answer" : "echo Bustin Bash",
-    "Error" : "Seems like you didn't type the command correctly.  Try again.",
-    "Hint" : "try typing something like 'echo your sentence here.'",
-    "ID" : 8,
-    "Instructions" : "The command 'echo' is used display text to the console. For example, '$echo Hey Universe' prints 'Hey Universe' to the screen. This is an example of Bash's STDOUT, or Standard Output, which is the output of a command. ",
-    "Question" : "Print 'Bustin Bash' out to the console.",
-    "Success" : "Bustin Bash",
-    "Title" : "echo/STDOUT"
-    },
-    "Lesson9" : {
+  },
+  "Lesson06" : {
     "Answer" : "touch the_bay.txt",
     "Error" : "oops! Looks like you didn't create a new file called the_bay.txt",
     "Hint" : "just type touch then the filename to create a new file",
-    "ID" : 9,
+    "ID" : 6,
     "Instructions" : "You can create new files easily with the touch command. Creating a new file is super easy! Just type 'touch' then the name of the file you would like to create.",
     "Question" : "Create a new file called the_bay.txt",
     "Success" : "",
-    "Title" : "touch"
-    },
-
+    "Title" : "Create File"
+  },
+  "Lesson07" : {
+    "Answer" : "rm the_bay.txt",
+    "Error" : "oops! Looks like you delete the newly created file called the_bay.txt",
+    "Hint" : "just type 'rm' then the filename to delete the file",
+    "ID" : 7,
+    "Instructions" : "You can delete the file by typing 'rm' followed by filename.",
+    "Question" : "Delete the file called the_bay.txt",
+    "Success" : "File Deleted",
+    "Title" : "Delete File"
+  },
+  "Lesson08" : {
+    "Answer" : "cd ..",
+    "Branches" : [ "san_francisco", "newyork_city", "austin" ],
+    "Error" : "Seems like you didn't traverse up one level in your directory.  Try again.",
+    "Hint" : "Please Change Directories to continue (cd ..)",
+    "ID" : 8,
+    "Instructions" : "Please cd back to 'san_francisco' folder.",
+    "Question" : "Change your current directory to /ca",
+    "Success" : "/ca",
+    "Target" : "ca",
+    "Title" : "Change Directory"
+  },
+  "Lesson09" : {
+    "Answer" : "mkdir marin",
+    "Branches" : [ "ggpark.txt", "crissyfield.txt", "giants.txt" ],
+    "Error" : "Seems like you didn't create a directory called 'marin'.  Try again!",
+    "Hint" : "You'll want to make use of the 'mkdir' command",
+    "ID" : 9,
+    "Instructions" : "Creating directories is an integral part of using Bash. A directory is a folder on your computer that contains other folders and files. To create a new directory we use the 'mkdir' command followed by the directory name.",
+    "Question" : "Make a new directory in the san_francisco directory called marin.",
+    "Success" : "mkdir marin",
+    "Target" : "san_francisco",
+    "Title" : "Make Directory"
+  }
 }

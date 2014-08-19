@@ -5,8 +5,7 @@ BustinBash.Database.Model = function() {
     var url = "https://radiant-fire-9915.firebaseio.com/";
     var firebaseRef = new Firebase(url);
     firebaseRef.on("value", function(snap) {
-      self.store = JSON.stringify(snap.val())
-      self.store = JSON.parse(self.store)
+      self.store = JSON.parse(JSON.stringify(snap.val()))
       controller.run(self.store)
     })
   }
