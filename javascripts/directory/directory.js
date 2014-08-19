@@ -73,7 +73,6 @@ BustinBash.Directory.Controller.prototype = {
 	bindListeners: function() {
 		$(document).on('changeLevel', function(event, data) {
 			this.data = data;
-			this.thisLevel(data)
 		}.bind(this));
 
 		$(document).on('success', function() {
