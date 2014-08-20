@@ -20,11 +20,10 @@ BustinBash.Lessons.Controller.prototype = {
 
  bindListeners: function() {
   $(document).on('getData', function(event, data) {
-      this.db = data
-      this.createNavigationButtons(data);
+      this.createNavigationButtons(this.db);
     }.bind(this))
 },
-
+//  TODO:  Look into iterating directly through data rather than making an array
  createNavigationButtons: function(data) {
   var lessonArray = Object.keys(data)
   for (var i = 0; i < lessonArray.length; i++) {
