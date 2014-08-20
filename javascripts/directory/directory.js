@@ -36,7 +36,7 @@ BustinBash.Directory.Controller.prototype = {
 
 		$(document).on('success', function(e, data) {
 			// debugger
-			if(data().ID <= 12 ){
+			if(data().ID <= 20 ){
 				this.checkLevel(data())
 			}
 		}.bind(this));
