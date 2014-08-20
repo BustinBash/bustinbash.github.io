@@ -24,7 +24,7 @@ BustinBash.Master.Controller.prototype = {
       var self = this
       setTimeout(function(){
         self.switchLevel(self.localData, self.masterData);
-      }, 2000)
+      }, 1000)
 
     }.bind(this));
   },
