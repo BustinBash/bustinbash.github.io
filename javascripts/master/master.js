@@ -5,6 +5,7 @@ BustinBash.Master.Controller.prototype = {
     $(document).on('getData', function(event, data) {
       this.db = data
       this.bindListeners(this.db)
+      this.getLocalStorage();
       this.autoLoadFirst(this.db)
     }.bind(this)
     )
@@ -16,7 +17,7 @@ BustinBash.Master.Controller.prototype = {
       self.deleteHint()
       var id = $(this).attr('id')
       var level = data[id]
-    $(document).trigger('changeLevel', level)
+      $(document).trigger('changeLevel', level)
     });
     $(document).on('success', function(event, localData) {
       this.localData = localData()
@@ -31,9 +32,21 @@ BustinBash.Master.Controller.prototype = {
     $('.hints').children().first().html("")
   },
 
+  getLocalStorage: function() {
+    if (localStorage.lessons != undefined) {
+      var storage = localStorage.lessons.split(',').sort()
+      this.storage = storage[storage.length - 1]
+    }
+  },
+
   autoLoadFirst: function(data){
-    var firstLesson = data.Lesson1
-    $(document).trigger('changeLevel', firstLesson)
+    if (this.storage != undefined){
+      var currentLesson = data["Lesson" + this.storage]
+      $(document).trigger('changeLevel', currentLesson)
+    } else {
+      var currentLesson = data.Lesson1
+      $(document).trigger('changeLevel', currentLesson)
+    }
   },
 
   switchLevel: function(localData, masterData) {
