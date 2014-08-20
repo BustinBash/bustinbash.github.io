@@ -7,6 +7,7 @@ BustinBash.Directory.View.prototype = {
 
 		if(data != undefined){
 			$(data.Show).show();
+			$(data.Hide).hide();
 		}
 	},
 
