@@ -14,7 +14,7 @@ BustinBash.Lessons.View.prototype = {
   renderSuccessButton: function(id){
     $('#Lesson' + id + " img")[0].src = "images/terminal_success.png"
   },
-  
+
   updateDOM: function(text) {
     $('#navbar_popup').append(text)
   }
@@ -49,7 +49,7 @@ BustinBash.Lessons.Controller.prototype = {
 
     if (this.completedLessons != undefined){
       this.completedLessons.forEach(function(number){
-        this.replaceButton(number); 
+        this.replaceButton(number);
       }.bind(this));
     }
   },
