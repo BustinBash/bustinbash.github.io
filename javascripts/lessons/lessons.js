@@ -12,7 +12,9 @@ BustinBash.Lessons.View.prototype = {
   },
 
   renderSuccessButton: function(id){
-    $('#Lesson' + id + " img")[0].src = "images/terminal_success.png"
+    if (id >= 1){
+      $('#Lesson' + id + " img")[0].src = "images/terminal_success.png"
+    }
   },
 
   updateDOM: function(text) {

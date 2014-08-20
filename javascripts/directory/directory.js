@@ -3,22 +3,19 @@ BustinBash.Directory.View = function() {}
 BustinBash.Directory.View.prototype = {
 
 	hideAndShowDOM: function(data) {
-			$(data.Hide).hide();
-			$(data.Show).show();
-			this.clearDom();
-			this.appendCurrentFolder(data.Target)
-		},
+		$(data.Hide).hide();
+		$(data.Show).show();
+		this.clearDom();
+	},
 
-		clearDom: function() {
-			$('#directory-template li').hide();
-		},
+	clearDom: function() {
+		$('#directory-template li').hide();
+	},
 
-		appendCurrentFolder: function(data) {
-			$('.current-folder').text(data)
-		}
-
+	appendCurrentFolder: function(data) {
+		$('.current-folder').text(data)
+	}
 }
-
 
 BustinBash.Directory.Controller = function(view) {
 	this.view = view;
@@ -34,7 +31,9 @@ BustinBash.Directory.Controller.prototype = {
 		}.bind(this));
 
 		$(document).on('success', function() {
-			this.checkLevel(this.data)
+			if(this.data.ID <= 12 ){
+				this.checkLevel(this.data)
+			}
 		}.bind(this));
 	},
 
