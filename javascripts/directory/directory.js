@@ -33,9 +33,10 @@ BustinBash.Directory.Controller.prototype = {
 			this.view.hideAndShowDOM(previousLevel)
 		}.bind(this));
 
-		$(document).on('success', function() {
-			if(this.data.ID <= 12 ){
-				this.checkLevel(this.data)
+		$(document).on('success', function(e, data) {
+			// debugger
+			if(data().ID <= 12 ){
+				this.checkLevel(data())
 			}
 		}.bind(this));
 	},
