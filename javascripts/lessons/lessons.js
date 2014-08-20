@@ -2,16 +2,18 @@
 BustinBash.Lessons.View = function() {}
 
 BustinBash.Lessons.View.prototype = {
-  render: function(navigationButton) {
-    $('#navbar_popup').append(navigationButton)
-  },
-  render: function(question) {
+
+  render: function(lesson, title) {
     var source   = $("#lessons-template").html();
     var template = Handlebars.compile(source);
-    var context = {lesson: lesson}
+    var context = {lesson: lesson, title: title}
     var text    = template(context);
-    $('.question').html(text)
-  }
+    this.updateDOM(text)
+  },
+
+  updateDOM: function(text) {
+    $('#navbar_popup').append(text)
+ }
 }
 
 //----- Controller -------
@@ -33,7 +35,7 @@ bindListeners: function() {
 
 createNavigationButtons: function(data) {
   for (lesson in data) {
-    this.view.render("<div class='tooltip levels' id='" + lesson + "' data-tooltip-content='" + lesson.Title + "'><img class='little' src='images/terminal.png'></div>")
+    this.view.render(lesson, data[lesson].Title)
   }
 }
 }
