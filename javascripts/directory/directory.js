@@ -3,9 +3,11 @@ BustinBash.Directory.View = function() {}
 BustinBash.Directory.View.prototype = {
 
 	hideAndShowDOM: function(data) {
-		$(data.Hide).hide();
-		$(data.Show).show();
-		this.clearDom();
+		if(data != undefined){	
+			$(data.Hide).hide();
+			$(data.Show).show();
+			this.clearDom();
+		}
 	},
 
 	clearDom: function() {
