@@ -1,4 +1,5 @@
-BustinBash.Master.Controller = function() {}
+BustinBash.Master.Controller = function() {
+}
 
 BustinBash.Master.Controller.prototype = {
   init: function(){
@@ -18,19 +19,15 @@ BustinBash.Master.Controller.prototype = {
       self.deleteHint()
       var elementId = e.target.parentElement.id
       var id = self.masterData[elementId].ID
-      var dirID = self.masterData[elementId].ID - 1
-      var level = self.masterData["Lesson"+id]
-      $(document).trigger('changeLevel', level)
-      $(document).trigger('clickLevel', self.masterData["Lesson"+dirID])
-
-    });
+      this.changeLevel(id)
+    }.bind(this));
 
     $(document).on('success', function(event, localData) {
       this.deleteHint();
       this.localData = localData()
       var self = this
       setTimeout(function(){
-        self.switchLevel(self.localData, self.masterData);
+        self.changeLevel(self.localData.ID + 1)
       }, 1000)
 
     }.bind(this));
@@ -47,18 +44,16 @@ BustinBash.Master.Controller.prototype = {
   },
 
   autoLoadFirst: function(data){
-    if (this.storage != ""){
-      var currentLesson = data["Lesson" + (parseInt(this.storage) + 1)]
-      $(document).trigger('changeLevel', currentLesson)
-    } else {
-      var currentLesson = data.Lesson1
-      $(document).trigger('changeLevel', currentLesson)
-    }
+    this.masterData = data
+    var level = (this.storage != "" ? this.storage : 1)
+    this.changeLevel(level)
   },
 
-  switchLevel: function(localData, masterData) {
-    var lesson = masterData["Lesson" + (localData.ID + 1)]
-    $(document).trigger('changeLevel', lesson)
+  changeLevel: function(id) {
+    var level = this.masterData["Lesson"+id]
+    var previousLevel = this.masterData["Lesson"+ (id-1)]
+    $(document).trigger('changeLevel', [level,previousLevel])
+
   }
 
 }
