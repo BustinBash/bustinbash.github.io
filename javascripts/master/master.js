@@ -26,6 +26,7 @@ BustinBash.Master.Controller.prototype = {
     });
 
     $(document).on('success', function(event, localData) {
+      this.deleteHint();
       this.localData = localData()
       var self = this
       setTimeout(function(){
