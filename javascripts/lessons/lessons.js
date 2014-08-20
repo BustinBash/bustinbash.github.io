@@ -2,11 +2,21 @@
 BustinBash.Lessons.View = function() {}
 
 BustinBash.Lessons.View.prototype = {
-  render: function(navigationButton) {
-    $('#navbar_popup').append(navigationButton)
+
+  render: function(lesson, title) {
+    var source   = $("#lessons-template").html();
+    var template = Handlebars.compile(source);
+    var context = {lesson: lesson, title: title}
+    var text    = template(context);
+    this.updateDOM(text)
   },
+
   renderSuccessButton: function(id){
     $('#Lesson' + id + " img")[0].src = "images/terminal_success.png"
+  },
+  
+  updateDOM: function(text) {
+    $('#navbar_popup').append(text)
   }
 }
 
@@ -17,39 +27,40 @@ BustinBash.Lessons.Controller = function(view) {
 }
 
 BustinBash.Lessons.Controller.prototype = {
- init: function() {
-  this.bindListeners();
-},
+  init: function() {
+    this.bindListeners();
+  },
 
-bindListeners: function() {
-  $(document).on('getData', function(event, data) {
-    this.db = data
-    this.getLocalStorage();
-    this.createNavigationButtons(data);
-  }.bind(this));
-  $(document).on('success', function(event, data){
-    this.getLocalStorage();
-    this.replaceButton(data().ID);
-  }.bind(this));
-},
-createNavigationButtons: function(data) {
-  var lessonArray = Object.keys(data)
-  for (var i = 0; i < lessonArray.length; i++) {
-    this.view.render("<div class='tooltip levels' id='" + lessonArray[i] + "' data-tooltip-content='" + data[lessonArray[i]].Title + "'><img class='little' src='images/terminal.png'></div>")
-  }
-  if (this.completedLessons != undefined){
-    this.completedLessons.forEach(function(number){
-      this.replaceButton(number); 
+  bindListeners: function() {
+    $(document).on('getData', function(event, data) {
+      this.getLocalStorage();
+      this.createNavigationButtons(data);
     }.bind(this));
-  }
-},
-getLocalStorage: function(){
-  if (localStorage.lessons != undefined) {
-    this.completedLessons = localStorage.lessons.split(',').sort();
-  }
-},
-replaceButton: function(id) {
-  this.view.renderSuccessButton(id)
-}
+    $(document).on('success', function(event, data){
+      this.getLocalStorage();
+      this.replaceButton(data().ID);
+    }.bind(this));
+  },
 
+  createNavigationButtons: function(data) {
+    for (lesson in data) {
+      this.view.render(lesson, data[lesson].Title)
+    }
+
+    if (this.completedLessons != undefined){
+      this.completedLessons.forEach(function(number){
+        this.replaceButton(number); 
+      }.bind(this));
+    }
+  },
+
+  getLocalStorage: function(){
+    if (localStorage.lessons != undefined) {
+      this.completedLessons = localStorage.lessons.split(',').sort();
+    }
+  },
+
+  replaceButton: function(id) {
+    this.view.renderSuccessButton(id)
+  }
 }

@@ -36,14 +36,14 @@ BustinBash.Directory.View.prototype = {
 
 		// ~> touch the_bay.txt
 		6: function(data){
-
+			$('#the_bay').show();
 			this.appendCurrentFolder(data.Target)
 			this.clearDom()
 		},
 
 		// ~> rm the_bay.txt
 		7: function(data){
-
+			$('#the_bay').hide();
 			this.appendCurrentFolder(data.Target)
 			this.clearDom()
 		},
@@ -69,19 +69,17 @@ BustinBash.Directory.View.prototype = {
 			this.clearDom()
 		},
 
-		11: function(){
-
+		// ~> cd
+		11: function(data){
+			$('.states, .cities, .places, #divider3, #divider4').hide();
+			this.appendCurrentFolder(data.Target)
+			this.clearDom()
 		},
 
+		// ~> echo Bustin Bash
 		12: function(){
 
 		},
-
-		13: function(){
-
-		},
-
-
 
 		clearDom: function() {
 			$('#directory-template li').hide();
@@ -113,8 +111,7 @@ BustinBash.Directory.Controller.prototype = {
 	},
 
 	thisLevel: function(data){
-		var id = data.ID - 1
-		this.view.functionCollection[id](data);
+		this.view.functionCollection[(data.ID -1)](data);
 	},
 
 	checkLevel: function(data) {
