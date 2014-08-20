@@ -4,6 +4,13 @@ BustinBash.Lessons.View = function() {}
 BustinBash.Lessons.View.prototype = {
   render: function(navigationButton) {
     $('#navbar_popup').append(navigationButton)
+  },
+  render: function(question) {
+    var source   = $("#lessons-template").html();
+    var template = Handlebars.compile(source);
+    var context = {lesson: lesson}
+    var text    = template(context);
+    $('.question').html(text)
   }
 }
 
