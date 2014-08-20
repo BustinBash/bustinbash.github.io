@@ -7,7 +7,6 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/directory.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/app.css" >
   <link rel="stylesheet" type="text/css" href="stylesheets/terminal.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="stylesheets/hopscotch.css" rel="stylesheet">
   <!-- Javascripts -->
   <script type="text/javascript" src="javascripts/vendor/jquery-2.1.1.min.js"></script>
@@ -37,7 +36,8 @@
 
       </div>
       <div class="logo column third">
-        <img class="logo" src="images/terminal.png">Bustin Bash
+        <img class="logo" src="images/terminal.png">
+        <h2 id='header-title'>Bustin Bash</h2>
       </div>
     </div>
     <hr>
@@ -75,8 +75,10 @@
       </div>
 
       <div class="column third">
-        <div class="question"></div>
-        <button id="hint"> GIVE ME A HINT </button>
+        <div class="question">
+          <h5>Task:</h5>
+        </div>
+        <button id="hint"> HINT </button>
 
     <!-- Hints -->
 
@@ -270,7 +272,7 @@
       </div>
       <!--End of Directory-->
       <!-- Cool Tips about bash -->
-      <div class="column third">Tips</div>
+      <div class="column third"></div>
     </div>
     <hr>
     <!-- Footer -->
@@ -284,6 +286,7 @@
 
     <!-- Question -->
     <script id="question-template" type="text/x-handlebars-template">
+    <h3>Task</h3>
     <p>{{question}}</p>
     </script>
 

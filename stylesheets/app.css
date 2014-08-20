@@ -1,8 +1,23 @@
+.hints {
+  margin-left: 160px;
+  width: 200px;
+}
+.logo h2: {
+  margin-left: 60px;
+}
+.title {
+  margin-left: 30px;
+}
+.instructions {
+  margin-left: 30px;
+}
 #hint {
-  margin-left: 100px;
+  width: 100px;
+  margin-top: 30px;
+  margin-left: 160px;
 }
 .question {
-  margin-left: 100px;
+  margin-left: 160px;
 }
 *{
 
@@ -10,7 +25,6 @@
 
 body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14 px;
     background-image: url('../images/background.png');
 }
 
@@ -40,7 +54,7 @@ div{
 
 .container {
   margin: 0 auto;
-  max-width: 65rem;
+  max-width: 1040px;
   width: 90%;
 }
 
@@ -126,69 +140,24 @@ div.footer{
 
 /* Responsive Grid */
 
-/* Small Screen (< 640) */
-@media (max-width: 40rem) {
-  html { font-size: 100%; }
-  .column {
-      float: left;
-      padding-left: 5px;
-    }
-
-    .column.full { width: 100%; }
-    .column.two-thirds { width: 66.7%;}
-    .column.half { width: 50%; }
-    .column.third { width: 33.3%; }
-    .column.fourth { width: 25%; }
-    .column.fifth {
-      width: 19%;
-      height: 100%;
-      border-left: thin solid #bdc3c7;
-     }
-    .column.flow-opposite { float: right; }
-}
-
-/* Medium screens (640px) */
-@media (min-width: 40rem) {
-  html { font-size: 112%; }
-  .column {
-      float: left;
-      padding-left: 5px;
-    }
-
-    .column.full { width: 100%; }
-    .column.two-thirds { width: 66.7%; }
-    .column.half { width: 50%; }
-    .column.third { width: 33.3%; }
-    .column.fourth { width: 25%; }
-    .column.fifth {
-      width: 19%;
-      height: 100%;
-      border-left: thin solid #bdc3c7;
-     }
-    .column.flow-opposite { float: right; }
-}
-
 /* Large screens (1024px) */
-@media (min-width: 64rem) {
-  html { font-size: 120%; }
   .column {
       float: left;
       padding-left: 5px;
     }
 
-    .column.full { width: 100%; }
-    .column.two-thirds { width: 66.7%; }
-    .column.half { width: 50%; }
-    .column.third { width: 33.3%; }
-    .column.fourth { width: 25%; }
-    .column.fifth { width: 19%; }
+    .column.full { width: 1024px; }
+    .column.two-thirds { width: 686px; }
+    .column.half { width: 512px; }
+    .column.third { width: 341.333px; }
+    .column.fourth { width: 256px; }
+    .column.fifth { width: 205px; }
     .column.fifth {
-      width: 19%;
+      width: 140px;
       height: 100%;
       border-left: thin solid #bdc3c7;
      }
     .column.flow-opposite { float: right; }
-}
 
 *, *:before, *:after {
   -moz-box-sizing: border-box;
