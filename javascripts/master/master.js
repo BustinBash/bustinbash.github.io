@@ -13,12 +13,18 @@ BustinBash.Master.Controller.prototype = {
   bindListeners: function(data) {
     this.masterData = data
     var self = this;
-    $('.levels').on('click', function(e) {
+
+    $('.navbar').on('click', function(e) {
       self.deleteHint()
-      var id = $(this).attr('id')
-      var level = data[id]
+      var elementId = e.target.parentElement.id
+      var id = self.masterData[elementId].ID
+      var dirID = self.masterData[elementId].ID - 1
+      var level = self.masterData["Lesson"+id]
       $(document).trigger('changeLevel', level)
+      $(document).trigger('clickLevel', self.masterData["Lesson"+dirID])
+
     });
+
     $(document).on('success', function(event, localData) {
       this.localData = localData()
       var self = this
