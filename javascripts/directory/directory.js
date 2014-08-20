@@ -28,6 +28,7 @@ BustinBash.Directory.Controller.prototype = {
 	bindListeners: function() {
 		$(document).on('changeLevel', function(event, data) {
 			this.data = data;
+			this.clickLevel(this.data)
 		}.bind(this));
 
 		$(document).on('success', function() {
@@ -39,6 +40,12 @@ BustinBash.Directory.Controller.prototype = {
 
 	checkLevel: function(data) {
 		this.view.hideAndShowDOM(data);
+	},
+
+	clickLevel: function(data){
+		$(document).on('clickLevel', function(event, data){
+			this.view.hideAndShowDOM(data);
+		}.bind(this))
 	}
 
 }
