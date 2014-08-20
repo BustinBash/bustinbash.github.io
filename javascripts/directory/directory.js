@@ -113,8 +113,7 @@ BustinBash.Directory.Controller.prototype = {
 	},
 
 	thisLevel: function(data){
-		var id = data.ID - 1
-		this.view.functionCollection[id](data);
+		this.view.functionCollection[(data.ID -1)](data);
 	},
 
 	checkLevel: function(data) {
