@@ -40,8 +40,8 @@ BustinBash.Master.Controller.prototype = {
   },
 
   autoLoadFirst: function(data){
-    if (this.storage != undefined){
-      var currentLesson = data["Lesson" + this.storage]
+    if (this.storage != ""){
+      var currentLesson = data["Lesson" + (parseInt(this.storage) + 1)]
       $(document).trigger('changeLevel', currentLesson)
     } else {
       var currentLesson = data.Lesson1

@@ -6,7 +6,7 @@ BustinBash.Lessons.View.prototype = {
     $('#navbar_popup').append(navigationButton)
   },
   renderSuccessButton: function(id){
-  $('#Lesson' + id + " img")[0].src = "images/terminal_success.png"
+    $('#Lesson' + id + " img")[0].src = "images/terminal_success.png"
   }
 }
 
@@ -35,11 +35,12 @@ bindListeners: function() {
 createNavigationButtons: function(data) {
   var lessonArray = Object.keys(data)
   for (var i = 0; i < lessonArray.length; i++) {
-    if (this.completedLessons != undefined && (this.completedLessons[i] - 1 == i)){
-      this.view.render("<div class='tooltip levels' id='" + lessonArray[i] + "' data-tooltip-content='" + data[lessonArray[i]].Title + "'><img class='little' src='images/terminal_success.png'></div>")
-    } else {
-      this.view.render("<div class='tooltip levels' id='" + lessonArray[i] + "' data-tooltip-content='" + data[lessonArray[i]].Title + "'><img class='little' src='images/terminal.png'></div>")
-    }
+    this.view.render("<div class='tooltip levels' id='" + lessonArray[i] + "' data-tooltip-content='" + data[lessonArray[i]].Title + "'><img class='little' src='images/terminal.png'></div>")
+  }
+  if (this.completedLessons != undefined){
+    this.completedLessons.forEach(function(number){
+      this.replaceButton(number); 
+    }.bind(this));
   }
 },
 getLocalStorage: function(){

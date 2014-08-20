@@ -2,7 +2,8 @@ $(document).ready(function(){
 
   var lsm = new BustinBash.Storage.Model
   var lsc = new BustinBash.Storage.Controller(lsm)
-  lsc.init();
+ lsc.init();
+  
   // Database
   var dbc = new BustinBash.Database.Controller
   var database = new BustinBash.Database.Model(dbc)
