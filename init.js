@@ -1,14 +1,24 @@
 $(document).ready(function(){
 
+  var lsm = new BustinBash.Storage.Model
+  var lsc = new BustinBash.Storage.Controller(lsm)
+  lsc.init();
+  
   // Database
   var dbc = new BustinBash.Database.Controller
-  var database = new BustinBash.Database.Model
-  database.fetch(dbc)
+  var database = new BustinBash.Database.Model(dbc)
+  database.fetch()
 
   // Master
   var mc = new BustinBash.Master.Controller
   mc.init();
   // mc.bindEvents()
+
+  // Lessons
+  var lv = new BustinBash.Lessons.View
+  var lc = new BustinBash.Lessons.Controller(lv)
+  lc.init();
+
   // Instruction
   var iv = new BustinBash.Instruction.View
   var ic = new BustinBash.Instruction.Controller(iv)
