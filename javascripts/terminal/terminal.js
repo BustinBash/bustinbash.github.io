@@ -52,8 +52,10 @@ BustinBash.Terminal.Controller.prototype = {
      if (e.which === 13) {
       this.checkInput(this.data)
     }
-  }.bind(this))
-
+  }.bind(this));
+    $('.terminal').on('click', function(e){
+      this.focusInput();
+    }.bind(this));
   },
   checkInput: function(data) {
     var input = this.view.input()
@@ -68,5 +70,8 @@ BustinBash.Terminal.Controller.prototype = {
     else {
       this.view.renderError(this.data.Error, input)
     }
+  },
+  focusInput: function(){
+    $('#terminal-input').focus();
   }
 }

@@ -3,15 +3,15 @@ BustinBash.Directory.View = function() {}
 BustinBash.Directory.View.prototype = {
 
 	hideAndShowDOM: function(data) {
-		if(data != undefined){	
-			$(data.Hide).hide();
+		this.clearDom();
+
+		if(data != undefined){
 			$(data.Show).show();
-			this.clearDom();
 		}
 	},
 
 	clearDom: function() {
-		$('#directory-template li').hide();
+		$('.directory .row .column ul:not(.countries)').hide()
 	},
 
 	appendCurrentFolder: function(data) {
@@ -21,6 +21,7 @@ BustinBash.Directory.View.prototype = {
 
 BustinBash.Directory.Controller = function(view) {
 	this.view = view;
+	this.current_level = ''
 }
 
 BustinBash.Directory.Controller.prototype = {
@@ -28,14 +29,14 @@ BustinBash.Directory.Controller.prototype = {
 		this.bindListeners();
 	},
 	bindListeners: function() {
-		$(document).on('changeLevel', function(event, data) {
-			this.data = data;
-			this.clickLevel(this.data)
+		$(document).on('changeLevel', function(e,l,previousLevel) {
+			this.view.hideAndShowDOM(previousLevel)
 		}.bind(this));
 
-		$(document).on('success', function() {
-			if(this.data.ID <= 12 ){
-				this.checkLevel(this.data)
+		$(document).on('success', function(e, data) {
+			// debugger
+			if(data().ID <= 12 ){
+				this.checkLevel(data())
 			}
 		}.bind(this));
 	},
@@ -43,11 +44,5 @@ BustinBash.Directory.Controller.prototype = {
 	checkLevel: function(data) {
 		this.view.hideAndShowDOM(data);
 	},
-
-	clickLevel: function(data){
-		$(document).on('clickLevel', function(event, data){
-			this.view.hideAndShowDOM(data);
-		}.bind(this))
-	}
 
 }
