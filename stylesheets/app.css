@@ -1,3 +1,15 @@
+#foggy {
+  display: none;
+}
+#yo {
+  display: none;
+}
+#the_bay{
+  display: none;
+}
+#marin{
+  display: none;
+}
 body{
   /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   /*font-family: Monaco, Consolas, "Lucida Console", monospace;*/
