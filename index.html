@@ -1,14 +1,14 @@
 <html>
 <head>
   <title>Bustin' Bash</title>
-  <!-- Stylesheets -->
 
+  <!-- Stylesheets -->
   <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="stylesheets/directory.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/app.css" >
+  <link rel="stylesheet" type="text/css" href="stylesheets/application.css" >
   <link rel="stylesheet" type="text/css" href="stylesheets/terminal.css">
   <link href="stylesheets/hopscotch.css" rel="stylesheet">
+
   <!-- Javascripts -->
   <script type="text/javascript" src="javascripts/vendor/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="javascripts/vendor/handlebars.js"></script>
@@ -26,7 +26,6 @@
   <script type="text/javascript" src="javascripts/tour/tour.js"></script>
   <script type="text/javascript" src="javascripts/lessons/lessons.js"></script>
   <script type="text/javascript" src="javascripts/storage/storage.js"></script>
-  <!-- {{> script_mania }} -->
 </head>
 <body>
   <div class="container">
@@ -34,11 +33,10 @@
     <!-- Navbar/ LOGO -->
     <div class="row clearfix">
       <div class="navbar column two-thirds" id ="navbar_popup">
-
       </div>
       <div class="logo column third">
+        <h1 class="logo-text">Bustin Bash</h1>
         <img class="logo" src="images/terminal.png">
-        <h2 id='header-title'>Bustin Bash</h2>
       </div>
     </div>
     <hr>
@@ -58,7 +56,7 @@
 
     <!-- Terminal/ Hints/ Questions -->
     <div class="row clearfix">
-      <div class="column two-thirds">
+      <div class="column two-thirds wrapper">
         <div class="term-nav">
           <div id='terminal-light'>
             <div id='red'></div>
@@ -78,15 +76,13 @@
         </div>
       </div>
 
-      <div class="column third">
-        <div class="box question">
+      <div class="task-box column third">
+        <div class="question">
           <h5>Task:</h5>
         </div>
-        <button id="hint">Stuck? <small>Hints</small></button>
-
-    <!-- Hints -->
-<br>
         <div class="hints"></div>
+        <button id="hint">Stuck? <small>Hints</small></button>
+        <!-- Hints -->
       </div>
     </div>
     <hr>
@@ -204,12 +200,12 @@
                           <span class="folder-text">ca</span>
                           <span class="pointer">&#9654</span>
                         </li>
-                          <li>
+                        <li>
                           <img class='folder-icon' src="images/icons/folder.png">
                           <span class="folder-text">ny</span>
                           <span class="pointer">&#9654</span>
                         </li>
-                          <li>
+                        <li>
                           <img class='folder-icon' src="images/icons/folder.png">
                           <span class="folder-text">tx</span>
                           <span class="pointer">&#9654</span>
@@ -260,70 +256,85 @@
                         <li id="the_bay">
                           <img class='folder-icon' src="images/icons/text.png">
                           <span class="folder-text">the_bay.txt</span>
+                        </li> 
+                        <li id="yo">
+                          <img class='folder-icon' src="images/icons/text.png">
+                          <span class="folder-text">yo.txt</span>
+                        </li>
+                        <li id="foggy">
+                          <img class='folder-icon' src="images/icons/text.png">
+                          <span class="folder-text">foggy_nights.txt</span>
                         </li>
                       </ul>
 
                     </div>
 
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
+
       </div>
       <!--End of Directory-->
       <!-- Cool Tips about bash -->
-      <div class="column third"></div>
-      <hr>
-      <!-- Footer -->
-      <div class="row clearfix">
-        <div class="footer">footer</div>
+      <div class="twitter-box column third">
+        <h2>Fun Facts</h2>
+
+        <!-- Embeded twitter widget-->
+        <a class="twitter-timeline" href="https://twitter.com/bustinbash" data-widget-id="502224798903042050">Tweets by @bustinbash</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
       </div>
     </div>
-
-
-
-    <!-- Handlebars Templates -->
-
-    <!-- Question -->
-    <script id="question-template" type="text/x-handlebars-template">
-    <h3>Task</h3>
-    <p>{{question}}</p>
-    </script>
-
-    <!-- Terminal -->
-    <script id="terminal-success-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
-    <p class='term-success'>{{success}}</p>
-    </script>
-
-    <script id="terminal-error-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
-    <p class='term-error'>{{error}}</p>
-    </script>
-
-    <!-- Hints -->
-    <script id="hints-template" type="text/x-handlebars-template">
-    <p>{{hint}}</p>
-    </script>
-
-    <!-- instruction -->
-    <script id="instruction-template-script" type="text/x-handlebars-template">
-    <p>{{instruction}}</p>
-    </script>
-
-    <!-- title -->
-    <script id="title-template" type="text/x-handlebars-template">
-    <h2>{{title}}</h2>
-    </script>
-
-    <!-- Lessons -->
-    <script id="lessons-template" type="text/x-handlebars-template">
-    <div class='tooltip levels' id={{lesson}} data-tooltip-content={{title}}><img class='little' src='images/terminal.png'></div>
-    </script>
-
+    <hr>
+    <!-- Footer -->
+    <div class="column full row clearfix">
+      <div class="footer">footer</div>
+    </div>
   </div>
+
+
+
+  <!-- Handlebars Templates -->
+
+  <!-- Question -->
+  <script id="question-template" type="text/x-handlebars-template">
+  <h2>Task</h2>
+  <p>{{question}}</p>
+  </script>
+
+  <!-- Terminal -->
+  <script id="terminal-success-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
+  <p class='term-success'>{{success}}</p>
+  </script>
+
+  <script id="terminal-error-template" type="text/x-handlebars-template"><p class='term-name'>BustinBash:- {{input}}</p>
+  <p class='term-error'>{{error}}</p>
+  </script>
+
+  <!-- Hints -->
+  <script id="hints-template" type="text/x-handlebars-template">
+  <p>{{hint}}</p>
+  </script>
+
+  <!-- instruction -->
+  <script id="instruction-template-script" type="text/x-handlebars-template">
+  <p>{{instruction}}</p>
+  </script>
+
+  <!-- title -->
+  <script id="title-template" type="text/x-handlebars-template">
+  <h2>{{title}}</h2>
+  </script>
+
+  <!-- Lessons -->
+  <script id="lessons-template" type="text/x-handlebars-template">
+  <div class='tooltip levels' id={{lesson}} data-tooltip-content={{title}}><img class='little' src='images/terminal.png'></div>
+  </script>
+
+</div>
 </div>
 
 </body>

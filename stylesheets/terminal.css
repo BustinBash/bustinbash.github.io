@@ -1,3 +1,7 @@
+.wrapper{
+  margin: 20px 0 30px 0;
+}
+
 .term-nav{
 
   margin-top: 20px;
@@ -42,7 +46,6 @@
   font-family: Monaco, Consolas, "Lucida Console", monospace;
 }
 #terminal-input:focus{
-
   outline: 0;
 }
 
@@ -54,27 +57,22 @@
   font-size: 15px;
 }
 .term-name {
-
   color:#3498db;
 }
 
 .term-success{
-
   color:#2ecc71;
 }
 
 .term-error{
-
   color: #e74c3c;
 }
 
 p {
-
   line-height: 1;
 }
 
 #terminal-light {
-
   display: inline;
   left: 4px;
 }
