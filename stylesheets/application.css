@@ -31,6 +31,19 @@ button{
   display:inline-block;
 }
 
+#foggy {
+  display: none;
+}
+#yo {
+  display: none;
+}
+#the_bay{
+  display: none;
+}
+#marin{
+  display: none;
+}
+
 .instructions {
   margin-left: 30px;
   display:inline-block;
