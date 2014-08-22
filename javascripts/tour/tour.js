@@ -15,6 +15,12 @@ var tour = {
       placement: "bottom"
     },
     {
+      title: "Task",
+      content: "Complete each task specified here",
+      target: "popup_task",
+      placement: "bottom"
+    },
+    {
       title: "Terminal",
       content: "Type your responses here and press enter to move on to the next level",
       target: "terminal_popup",
